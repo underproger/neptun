@@ -8,7 +8,7 @@
   --mint:#dfe9e6; --mint2:#e9f1ef; --paper:#eef4f2;
   --sky:#f5f8f7;
   --orange:#ef8a1e; --orange-d:#d97706;
-  --muted:#587a74; --line:#cfdedb;
+  --muted:#4e6f69; --line:#cfdedb;
   --pad:20px; --r:18px;
 }
 
@@ -31,6 +31,12 @@ a:focus-visible,button:focus-visible,label:has(input:focus-visible){outline:2px 
 
 .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--pad);}
 h1,h2,h3,h4{line-height:1.16;letter-spacing:-.02em;font-weight:800;}
+
+/* SVG-іконки зі спрайту: <svg class="ico"><use href="#i-…"/></svg> */
+.ico{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.14em;
+  fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.ico-fill{fill:currentColor;stroke:none;}
+.btn .ico{width:1.35em;height:1.35em;}
 
 /* іконка-тризуб усередині заголовків */
 .tri{width:.92em;height:1.1em;object-fit:contain;display:inline-block;vertical-align:-.16em;}

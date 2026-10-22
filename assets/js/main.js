@@ -1,7 +1,8 @@
 /* =========================================================
    Neptun — спільні скрипти для всіх сторінок
    - мобільне меню (бургер) + вкладені розділи
-   - мега-меню (desktop)
+   - мега-меню (desktop), тінь шапки при скролі
+   - меню розділу на сторінках docs (згортається на мобільному)
    - слайдери: стрілки, drag мишею, точки-пагінація
    - форми заявок (валідація)
    - липка кнопка CTA (mobile, тільки головна)
@@ -46,6 +47,23 @@
       }
     });
   });
+
+  /* ---------- тінь шапки при скролі ---------- */
+  const header = document.querySelector('header');
+  if (header) {
+    const onScroll = () => header.classList.toggle('scrolled', scrollY > 8);
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- меню розділу (docs): згорнуте на мобільному, відкрите з 700px ---------- */
+  const docNav = document.querySelector('[data-docnav]');
+  if (docNav) {
+    const mq = matchMedia('(min-width:700px)');
+    const sync = () => { docNav.open = mq.matches; };
+    sync();
+    mq.addEventListener('change', sync);
+  }
 
   /* ---------- мега-меню (desktop) ---------- */
   const mega = document.getElementById('mega');
@@ -136,8 +154,8 @@
     }, true);
   });
 
-  /* ---------- точки-пагінація для .swipe[data-d] ---------- */
-  document.querySelectorAll('.swipe[data-d]').forEach(tr => {
+  /* ---------- точки-пагінація для слайдерів з data-d="id контейнера точок" ---------- */
+  document.querySelectorAll('[data-d]').forEach(tr => {
     const box = document.getElementById(tr.dataset.d);
     if (!box) return;
     const n = tr.children.length;

@@ -31,6 +31,7 @@
   color:var(--deep);font-size:16px;align-items:center;justify-content:center;
   box-shadow:0 10px 22px -12px rgba(20,64,58,.5);transition:background .18s,color .18s,box-shadow .18s;
 }
+.sw-arrow .ico{width:18px;height:18px;stroke-width:2;}
 .sw-arrow:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
 .sw-arrow.left{left:-21px;}
 .sw-arrow.right{right:-21px;}
@@ -39,6 +40,8 @@
 .dots{display:flex;justify-content:center;gap:6px;}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--line);transition:.25s;}
 .dot.on{background:var(--teal);width:20px;border-radius:6px;}
+.dots-light .dot{background:rgba(255,255,255,.25);}
+.dots-light .dot.on{background:#fff;}
 
 /* ---------- form fields ---------- */
 .fld{width:100%;padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:var(--paper);
@@ -49,7 +52,11 @@
 .seg label{position:relative;cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:12px 4px;font-size:12px;font-weight:700;
   display:flex;flex-direction:column;align-items:center;gap:5px;transition:.15s;}
 .seg input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;}
+.seg label .ico{width:20px;height:20px;color:var(--deep2);}
 .seg label:has(input:checked){background:var(--mint);border-color:var(--teal);}
+/* згода з політикою під кнопкою форми */
+.fconsent{text-align:center;font-size:12px;font-weight:500;color:var(--muted);line-height:1.5;margin:10px 0 0;}
+.fconsent a{text-decoration:underline;text-underline-offset:2px;}
 
 /* ---------- bubbles (декоративні бульбашки) ---------- */
 .bubs{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;}

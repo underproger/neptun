@@ -21,7 +21,8 @@
 .usp i{color:var(--orange);font-style:normal;font-size:12px;}
 .msgs{display:flex;justify-content:center;gap:13px;margin:26px 0 14px;position:relative;z-index:7;}
 .msg{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);
-  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:19px;transition:.2s;}
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--deep2);transition:.2s;}
+.msg .ico{width:21px;height:21px;}
 .msg:hover{transform:translateY(-3px);background:#fff;}
 .hnote{font-size:13px;font-weight:600;color:var(--deep2);max-width:250px;margin:0 auto;
   line-height:1.45;position:relative;z-index:7;}
@@ -101,6 +102,7 @@
   display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--muted);
   transition:transform .3s cubic-bezier(.2,.8,.3,1), background .25s, color .25s, border-color .25s;
 }
+.step-c .ico{width:13px;height:13px;stroke-width:2.4;}
 .step.on .step-c{transform:rotate(180deg);background:var(--teal);border-color:var(--teal);color:#fff;}
 .step-b{
   display:grid;grid-template-rows:0fr;
@@ -109,7 +111,7 @@
 .step.on .step-b{grid-template-rows:1fr;}
 .step-b>div{overflow:hidden;}
 .step-b p{
-  font-size:12.5px;font-weight:500;color:var(--muted);line-height:1.55;
+  font-size:13px;font-weight:500;color:var(--muted);line-height:1.55;
   padding:0 14px 13px 57px;
   opacity:0;transform:translateY(-4px);
   transition:opacity .3s ease .06s, transform .3s ease .06s;
@@ -139,7 +141,13 @@
 .edash{display:flex;align-items:center;gap:8px;margin:9px 0 8px;}
 .edash:before,.edash:after{content:"";height:1px;flex:1;background:rgba(255,255,255,.14);}
 .edash img{width:12px;height:auto;flex:none;opacity:.9;}
-.ecard p{font-size:12px;font-weight:500;color:#b6d2cc;line-height:1.5;}
+.ecard p{font-size:13px;font-weight:500;color:#b6d2cc;line-height:1.55;}
+@media(max-width:699px){
+  .egrid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+    margin:0 calc(var(--pad)*-1);padding:2px var(--pad) 16px;-webkit-overflow-scrolling:touch;}
+  .egrid::-webkit-scrollbar{display:none;}
+  .ecard{flex:0 0 82%;scroll-snap-align:center;}
+}
 
 /* ================= BIZ (типи бізнесу) ================= */
 .biz{background:var(--paper);}
@@ -155,7 +163,7 @@
 .pane h3{font-size:20px;margin-bottom:12px;}
 .pane>.pc>div>p{font-size:14px;font-weight:500;color:var(--muted);margin-bottom:17px;line-height:1.65;}
 .bfeat{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:19px;}
-.bfeat li{font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:7px;color:var(--deep2);}
+.bfeat li{font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px;color:var(--deep2);}
 .bfeat li:before{content:"◆";color:var(--orange);font-size:8px;flex:none;}
 .fstrip{display:flex;gap:10px;margin:16px calc(var(--pad)*-1) 0;padding:2px var(--pad) 12px;
   overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
@@ -166,7 +174,7 @@
 }
 .fcell img{width:30px;height:30px;object-fit:contain;margin-bottom:10px;}
 .fcell h4{font-size:13px;font-weight:800;color:var(--deep);margin-bottom:6px;line-height:1.25;}
-.fcell p{font-size:11.5px;font-weight:500;color:var(--muted);line-height:1.5;}
+.fcell p{font-size:12px;font-weight:500;color:var(--muted);line-height:1.5;}
 
 /* --- live dashboard (SVG, будується в home.js; тільки desktop) --- */
 .livedash{display:none;}
@@ -185,10 +193,11 @@
 .si .ic{
   width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.14);
-  display:flex;align-items:center;justify-content:center;font-size:17px;flex:none;
+  display:flex;align-items:center;justify-content:center;flex:none;color:#ffb75f;
 }
+.si .ic .ico{width:20px;height:20px;}
 .si h4{font-size:14px;margin-bottom:4px;}
-.si p{font-size:11.8px;font-weight:500;color:#b6d2cc;line-height:1.5;}
+.si p{font-size:12.5px;font-weight:500;color:#b6d2cc;line-height:1.5;}
 
 .srow{display:grid;grid-template-columns:.82fr 1fr;gap:12px;align-items:stretch;margin-bottom:14px;height:230px;}
 .stone{display:flex;justify-content:center;align-items:center;min-height:0;}
@@ -204,22 +213,23 @@
 .demo-txt{display:flex;gap:13px;align-items:flex-start;}
 .demo-star{
   width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;flex:none;
-  display:flex;align-items:center;justify-content:center;font-size:18px;
+  display:flex;align-items:center;justify-content:center;
 }
+.demo-star .ico{width:19px;height:19px;}
 .demo h4{font-size:14px;margin-bottom:5px;}
-.demo p{font-size:12.3px;font-weight:500;color:var(--muted);line-height:1.55;}
+.demo p{font-size:13px;font-weight:500;color:var(--muted);line-height:1.55;}
 .demo .btn{flex:none;}
 
 /* ================= TESTIMONIALS ================= */
 .testi{background:var(--paper);overflow:hidden;}
 .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:19px 19px 20px;
   display:flex;flex-direction:column;overflow:hidden;box-shadow:0 14px 30px -26px rgba(20,64,58,.6);}
-.ttag{align-self:flex-start;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
+.ttag{align-self:flex-start;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
   color:var(--teal);background:var(--mint);padding:5px 11px;border-radius:20px;margin-bottom:10px;}
 .stars{color:var(--orange);font-size:13px;letter-spacing:1.5px;margin-bottom:10px;}
-.tcard p{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:14px;flex:1;line-height:1.6;}
+.tcard p{font-size:13.5px;font-weight:500;color:var(--muted);margin-bottom:14px;flex:1;line-height:1.6;}
 .tname{font-size:13px;font-weight:800;}
-.trole{font-size:11px;font-weight:600;color:var(--muted);}
+.trole{font-size:12px;font-weight:600;color:var(--muted);}
 .tcard-ico{
   display:flex;align-items:center;justify-content:center;
   width:50px;height:50px;border-radius:50%;margin-top:6px;flex:none;
@@ -242,6 +252,11 @@
 .logos img:hover{opacity:1;transform:translateY(-2px);}
 .logos img:first-child{margin-left:auto;}
 .logos img:last-child{margin-right:auto;}
+@media(max-width:699px){
+  .logos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 10px;justify-items:center;padding:0 16px;overflow:visible;}
+  .logos img{height:44px;max-width:100%;object-fit:contain;}
+  .logos img:first-child,.logos img:last-child{margin:0;}
+}
 
 /* ================= FAQ ================= */
 .faq{background:var(--paper);overflow:hidden;}
@@ -249,7 +264,8 @@
 .fq{display:flex;align-items:center;gap:13px;padding:17px;width:100%;text-align:left;font-weight:700;font-size:14.5px;}
 .qi{width:27px;height:27px;border-radius:50%;background:var(--deep2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none;}
 .fq .qt{flex:1;}
-.chev{font-size:11px;color:var(--muted);transition:transform .25s;flex:none;}
+.chev{display:flex;color:var(--muted);transition:transform .25s;flex:none;}
+.chev .ico{width:18px;height:18px;stroke-width:2.2;}
 .fitem.on .chev{transform:rotate(180deg);}
 .fa{max-height:0;overflow:hidden;transition:max-height .32s ease;}
 .fitem.on .fa{max-height:360px;}
@@ -261,7 +277,7 @@
   box-shadow:0 22px 48px -34px rgba(20,64,58,.6);position:relative;z-index:3;}
 .form h3{font-size:21px;text-align:center;}
 .form .rule{margin-bottom:20px;}
-.fnote{text-align:center;font-size:12px;font-weight:600;color:var(--muted);margin:15px 0 11px;}
+.fnote{text-align:center;font-size:12.5px;font-weight:600;color:var(--muted);margin:18px 0 11px;}
 .via{display:flex;gap:10px;}
 .form .btn{width:100%;}
 .via .btn{flex:1;}
@@ -297,6 +313,7 @@
   .step-b p{padding:0 17px 15px 74px;font-size:13px;}
 
   .egrid{grid-template-columns:1fr 1fr;gap:12px;}
+  #d3{display:none;}
 
   .sgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;}
   .slist{margin-bottom:0;}
@@ -438,9 +455,9 @@
   .sgrid{grid-template-columns:1fr 1.35fr;gap:22px;align-items:stretch;}
   .srow{height:330px;grid-template-columns:.85fr 1fr;gap:16px;}
   .si{padding:15px 0;}
-  .si .ic{width:42px;height:42px;font-size:18px;}
+  .si .ic{width:42px;height:42px;}
   .si h4{font-size:15px;}
-  .si p{font-size:12.5px;}
+  .si p{font-size:13px;}
   .demo{margin-top:18px;padding:18px 24px;}
 
   /* testimonials */
