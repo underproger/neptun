@@ -19,10 +19,10 @@
 <!-- ============ HEADER ============ -->
 <header id="hdr">
   <div class="nav">
-    <a href="../index.html" class="logo"><img src="../assets/img/trident.webp" alt="">Neptun</a>
+    <a href="../index.html" class="logo" aria-label="Neptun — на головну"><img src="../assets/img/trident.webp" alt="" width="61" height="71">Neptun</a>
     <nav class="nlinks">
-      <button class="ntrig" data-mega="1">Віртуальна АТС <span class="car">&#9662;</span></button>
-      <button class="ntrig" data-mega="1">Для бізнесу <span class="car">&#9662;</span></button>
+      <button class="ntrig" type="button" data-mega="1" aria-expanded="false" aria-controls="mega">Віртуальна АТС <span class="car">&#9662;</span></button>
+      <button class="ntrig" type="button" data-mega="1" aria-expanded="false" aria-controls="mega">Для бізнесу <span class="car">&#9662;</span></button>
       <a href="../index.html#smart">Автодайлер / Smart Calls</a>
       <a href="../index.html#testi">Кейси</a>
       <a href="../index.html#faq">Ціни</a>
@@ -35,7 +35,7 @@
         <a href="../index.html#form" class="btn b-outline">Увійти</a>
         <a href="../index.html#form" class="btn b-orange">Зареєструватися</a>
       </div>
-      <button class="burger" id="bg" aria-label="Меню"><span></span><span></span><span></span></button>
+      <button class="burger" id="bg" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
     </div>
   </div>
 
@@ -43,22 +43,22 @@
     <div class="mega-in">
       <div class="mcol">
         <h4><a href="../docs/ats.html">Віртуальна АТС</a></h4>
-        <a href="../docs/ats-connect.html"><img src="../assets/img/eco_anchor.webp" alt="">Як підключити</a>
-        <a href="../docs/ats-features.html"><img src="../assets/img/eco_wheel.webp" alt="">Можливості та функції</a>
-        <a href="../docs/ats-numbers.html"><img src="../assets/img/eco_horn.webp" alt="">Віртуальні номери</a>
-        <a href="../docs/ats-crm.html"><img src="../assets/img/eco_compass.webp" alt="">Інтеграції з CRM</a>
-        <a href="../docs/ats-pricing.html"><img src="../assets/img/eco_diving.webp" alt="">Тарифи на віртуальну АТС</a>
+        <a href="../docs/ats-connect.html"><img src="../assets/img/eco_anchor.webp" alt="" width="103" height="145">Як підключити</a>
+        <a href="../docs/ats-features.html"><img src="../assets/img/eco_wheel.webp" alt="" width="103" height="138">Можливості та функції</a>
+        <a href="../docs/ats-numbers.html"><img src="../assets/img/eco_horn.webp" alt="" width="103" height="125">Віртуальні номери</a>
+        <a href="../docs/ats-crm.html"><img src="../assets/img/eco_compass.webp" alt="" width="103" height="133">Інтеграції з CRM</a>
+        <a href="../docs/ats-pricing.html"><img src="../assets/img/eco_diving.webp" alt="" width="103" height="126">Тарифи на віртуальну АТС</a>
       </div>
       <div class="mcol wide">
         <h4><a href="../docs/biz.html">Для бізнесу</a></h4>
         <div class="mgrid">
-          <a href="../docs/biz-trust.html"><img src="../assets/img/eco_shell.webp" alt="">Номери, які підвищують довіру клієнтів</a>
-          <a href="../docs/biz-intl.html"><img src="../assets/img/eco_wheel.webp" alt="">Міжнародні номери без кордонів</a>
-          <a href="../docs/biz-sales.html"><img src="../assets/img/eco_compass.webp" alt="">Рішення для відділів продажів</a>
-          <a href="../docs/biz-sms-api.html"><img src="../assets/img/eco_treasure.webp" alt="">Номери з SMS, API та автоматизацією</a>
-          <a href="../docs/biz-callcenter.html"><img src="../assets/img/eco_bars.webp" alt="">Для колл-центрів та вихідних кампаній</a>
-          <a href="../docs/biz-fast.html"><img src="../assets/img/eco_horn.webp" alt="">Швидкий старт без KYC та бюрократії</a>
-          <a href="../docs/biz-ecom.html"><img src="../assets/img/eco_diving.webp" alt="">Для e-commerce та інтернет-магазинів</a>
+          <a href="../docs/biz-trust.html"><img src="../assets/img/eco_shell.webp" alt="" width="103" height="122">Номери, які підвищують довіру клієнтів</a>
+          <a href="../docs/biz-intl.html"><img src="../assets/img/eco_wheel.webp" alt="" width="103" height="138">Міжнародні номери без кордонів</a>
+          <a href="../docs/biz-sales.html"><img src="../assets/img/eco_compass.webp" alt="" width="103" height="133">Рішення для відділів продажів</a>
+          <a href="../docs/biz-sms-api.html"><img src="../assets/img/eco_treasure.webp" alt="" width="105" height="113">Номери з SMS, API та автоматизацією</a>
+          <a href="../docs/biz-callcenter.html"><img src="../assets/img/eco_bars.webp" alt="" width="103" height="117">Для колл-центрів та вихідних кампаній</a>
+          <a href="../docs/biz-fast.html"><img src="../assets/img/eco_horn.webp" alt="" width="103" height="125">Швидкий старт без KYC та бюрократії</a>
+          <a href="../docs/biz-ecom.html"><img src="../assets/img/eco_diving.webp" alt="" width="103" height="126">Для e-commerce та інтернет-магазинів</a>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@
 
   <div class="mmenu" id="mm">
     <div class="msec">
-      <button class="msec-h">Віртуальна АТС <span class="car">&#9662;</span></button>
+      <button class="msec-h" type="button" aria-expanded="false">Віртуальна АТС <span class="car">&#9662;</span></button>
       <div class="msec-b"><div>
         <a href="../docs/ats.html"><b>Огляд розділу</b></a>
         <a href="../docs/ats-connect.html">Як підключити</a>
@@ -77,12 +77,13 @@
       </div></div>
     </div>
     <div class="msec">
-      <button class="msec-h">Для бізнесу <span class="car">&#9662;</span></button>
+      <button class="msec-h" type="button" aria-expanded="false">Для бізнесу <span class="car">&#9662;</span></button>
       <div class="msec-b"><div>
         <a href="../docs/biz.html"><b>Огляд розділу</b></a>
         <a href="../docs/biz-trust.html">Номери, які підвищують довіру клієнтів</a>
         <a href="../docs/biz-intl.html">Міжнародні номери без кордонів</a>
         <a href="../docs/biz-sales.html">Рішення для відділів продажів</a>
+        <a href="../docs/biz-sms-api.html">Номери з SMS, API та автоматизацією</a>
         <a href="../docs/biz-callcenter.html">Для колл-центрів та вихідних кампаній</a>
         <a href="../docs/biz-ecom.html">Для e-commerce та інтернет-магазинів</a>
         <a href="../docs/biz-fast.html">Швидкий старт без KYC</a>
@@ -111,7 +112,7 @@
         <div class="art-meta"><span>14 серпня 2026</span> &middot; <span>6 хв читання</span></div>
       </div>
     </div>
-    <div class="art-cover"><img src="../assets/img/post_missed.webp" alt=""></div>
+    <div class="art-cover"><img src="../assets/img/post_missed.webp" alt="Як не втрачати лідів через пропущені дзвінки: 7 проблем відділу продажів" width="700" height="466"></div>
     <div class="wrap">
       <div class="art-body">
 <h2>Один пропущений дзвінок може коштувати дорожче, ніж здається</h2><p>Клієнт залишив заявку. Менеджер не відповів. Що робить клієнт? У більшості випадків — телефонує конкуренту.</p><p>Проблема в тому, що керівник часто бачить лише кількість заявок у CRM. А ось те, скільки потенційних клієнтів не дочекалися відповіді, залишається непомітним.</p><h2>1. Менеджер не встиг відповісти</h2><p>Реклама запустилася, дзвінків стало більше, а команда залишилася тією самою. В результаті частина викликів залишається без відповіді.</p><h2>2. Дзвінок потрапив не до того менеджера</h2><p>Якщо немає правильної маршрутизації, клієнт може чекати, поки потрібний співробітник звільниться.</p><h2>3. Менеджер забув передзвонити</h2><p>Це одна з найнебезпечніших проблем. Лід є. Контакт є. Але повторного дзвінка немає.</p><h2>4. Керівник не бачить реальної картини</h2><p>Без аналітики складно зрозуміти:</p><ul><li>скільки дзвінків пропущено</li><li>хто їх пропускає</li><li>як швидко передзвонюють</li><li>який канал генерує найбільше дзвінків</li></ul><h2>5. Реклама приводить ліди, але телефонія їх не обробляє</h2><p>Це особливо критично для бізнесу з дорогим трафіком. Можна збільшувати рекламний бюджет, але якщо відділ продажів не встигає обробляти звернення — масштабування лише збільшить втрати.</p><h2>Що робить віртуальна АТС?</h2><p>Вона може автоматизувати маршрутизацію, фіксацію дзвінків, контроль пропущених викликів та статистику. Такі функції вже стали стандартною частиною сучасних бізнес-АТС.</p><p>У Neptun це можна доповнити Smart Calls, AI-дзвінками та HLR-перевіркою номерів. Тобто система допомагає не просто приймати дзвінки, а будувати керований процес їх обробки.</p><blockquote>Проблема не завжди у кількості лідів. Іноді проблема в тому, що відбувається з ними після того, як вони телефонують.</blockquote>
@@ -119,16 +120,46 @@
       <div class="art-cta">
         <h3>Хочете так само у своєму бізнесі?</h3>
         <p>Підключення за 15 хвилин, без документів і KYC.</p>
-        <a class="btn b-orange" href="../index.html#form">Отримати консультацію &rarr;</a>
+        <a class="btn b-orange" href="#consult">Отримати консультацію &rarr;</a>
       </div>
       <h2 class="art-more-t">Інші статті за темою</h2>
       <div class="bl-grid">
-        <a class="bpost" href="../blog/virtualna-ats.html" data-cat="Віртуальна АТС"><div class="bcover"><img src="../assets/img/post_ats.webp" alt=""></div><div class="bbody"><div class="brow"><span class="btag">Віртуальна АТС</span><span class="btag">VoIP</span><time>18 серпня 2026</time></div><h3>Віртуальна АТС для бізнесу: що це, як працює та навіщо вона відділу продажів</h3><p>Якщо у компанії вже не один менеджер, десятки або сотні дзвінків на день, кілька рекламних каналів та CRM, звичайного мобільного телефону стає недостатньо.</p></div><img class="bpeb" src="../assets/img/seabed.webp" alt=""></a>
-        <a class="bpost" href="../blog/avtodailer.html" data-cat="Автодайлер"><div class="bcover"><img src="../assets/img/post_dialer.webp" alt=""></div><div class="bbody"><div class="brow"><span class="btag">Автодайлер</span><span class="btag">VoIP</span><time>9 серпня 2026</time></div><h3>Автодайлер для відділу продажів: як менеджерам робити більше дзвінків</h3><p>Знайти номер → скопіювати → вставити → набрати → почекати → почути «зайнято» → записати результат. І так сотні разів. Це не продажі, це ручна робота.</p></div><img class="bpeb" src="../assets/img/seabed.webp" alt=""></a>
-        <a class="bpost" href="../blog/hlr-perevirka.html" data-cat="HLR"><div class="bcover"><img src="../assets/img/post_hlr.webp" alt=""></div><div class="bbody"><div class="brow"><span class="btag">HLR</span><span class="btag">VoIP</span><time>2 серпня 2026</time></div><h3>HLR-перевірка номерів: що це та навіщо вона потрібна бізнесу</h3><p>У базі можуть бути неактивні номери, помилкові контакти й дублікати. Якщо менеджери дзвонять по всій базі вручну, компанія витрачає час і ресурси.</p></div><img class="bpeb" src="../assets/img/seabed.webp" alt=""></a>
+        <a class="bpost" href="../blog/virtualna-ats.html" data-cat="Віртуальна АТС"><div class="bcover"><img src="../assets/img/post_ats.webp" alt="Віртуальна АТС для бізнесу: що це, як працює та навіщо вона відділу продажів" width="700" height="466" loading="lazy" decoding="async"></div><div class="bbody"><div class="brow"><span class="btag">Віртуальна АТС</span><span class="btag">VoIP</span><time>18 серпня 2026</time></div><h3>Віртуальна АТС для бізнесу: що це, як працює та навіщо вона відділу продажів</h3><p>Якщо у компанії вже не один менеджер, десятки або сотні дзвінків на день, кілька рекламних каналів та CRM, звичайного мобільного телефону стає недостатньо.</p></div><img class="bpeb" src="../assets/img/seabed.webp" alt="" width="820" height="83" loading="lazy" decoding="async"></a>
+        <a class="bpost" href="../blog/avtodailer.html" data-cat="Автодайлер"><div class="bcover"><img src="../assets/img/post_dialer.webp" alt="Автодайлер для відділу продажів: як менеджерам робити більше дзвінків" width="700" height="466" loading="lazy" decoding="async"></div><div class="bbody"><div class="brow"><span class="btag">Автодайлер</span><span class="btag">VoIP</span><time>9 серпня 2026</time></div><h3>Автодайлер для відділу продажів: як менеджерам робити більше дзвінків</h3><p>Знайти номер → скопіювати → вставити → набрати → почекати → почути «зайнято» → записати результат. І так сотні разів. Це не продажі, це ручна робота.</p></div><img class="bpeb" src="../assets/img/seabed.webp" alt="" width="820" height="83" loading="lazy" decoding="async"></a>
+        <a class="bpost" href="../blog/hlr-perevirka.html" data-cat="HLR"><div class="bcover"><img src="../assets/img/post_hlr.webp" alt="HLR-перевірка номерів: що це та навіщо вона потрібна бізнесу" width="700" height="466" loading="lazy" decoding="async"></div><div class="bbody"><div class="brow"><span class="btag">HLR</span><span class="btag">VoIP</span><time>2 серпня 2026</time></div><h3>HLR-перевірка номерів: що це та навіщо вона потрібна бізнесу</h3><p>У базі можуть бути неактивні номери, помилкові контакти й дублікати. Якщо менеджери дзвонять по всій базі вручну, компанія витрачає час і ресурси.</p></div><img class="bpeb" src="../assets/img/seabed.webp" alt="" width="820" height="83" loading="lazy" decoding="async"></a>
       </div>
     </div>
   </article>
+
+  <section class="bl-cta" id="consult">
+    <div class="wrap bl-cta-in">
+      <form class="bl-form" action="#" method="post" data-form novalidate>
+        <h2>Бажаєте змінити оператора VoIP телефонії? Допоможемо зробити це <b>швидко та без втрати лідів</b></h2>
+        <input class="fld dark" name="name" placeholder="Ім'я" aria-label="Ім'я" autocomplete="name" required>
+        <input class="fld dark" name="phone" placeholder="Номер телефону" aria-label="Номер телефону" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+()\-\s]{7,}" required>
+        <div class="bl-seg" role="radiogroup" aria-label="Як з вами зв'язатися">
+          <label class="bs"><input type="radio" name="contact" value="telegram" checked>Telegram</label>
+          <label class="bs"><input type="radio" name="contact" value="whatsapp">WhatsApp</label>
+          <label class="bs"><input type="radio" name="contact" value="call">Дзвінок</label>
+        </div>
+        <button class="btn b-orange full" type="submit">Отримати консультацію</button>
+        <p class="bl-or">Або зв'яжіться з нами через</p>
+        <div class="bl-via">
+          <a href="#" class="btn b-outline-light">Telegram</a>
+          <a href="#" class="btn b-outline-light">WhatsApp</a>
+        </div>
+      </form>
+      <img class="bl-mer" src="../assets/img/mer_d.webp" alt="" width="340" height="308" loading="lazy" decoding="async">
+    </div>
+    <img class="bl-wave" src="../assets/img/fwave.webp" alt="" width="820" height="107" loading="lazy" decoding="async">
+    <div class="wrap bl-foot">
+      <div class="bl-logo"><img src="../assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async">Neptun</div>
+      <div class="bl-links"><a href="../index.html">Про нас</a><a href="../index.html#faq">Тарифи</a><a href="../index.html#testi">Відгуки</a><a href="../blog.html">Блог</a><a href="../index.html#journey">Шлях</a></div>
+      <div class="bl-contacts"><a href="tel:+380676667766">+38 (067) 666-77-66</a><br><a href="mailto:telecom@email.com">telecom@email.com</a></div>
+      <div class="bl-soc"><a href="#" aria-label="Instagram">&#128247;</a><a href="#" aria-label="Telegram">&#9992;&#65039;</a><a href="tel:+380676667766" aria-label="Зателефонувати">&#128222;</a></div>
+      <div class="bl-bot">Політика конфіденційності &nbsp;&middot;&nbsp; Neptun &copy; 2026</div>
+    </div>
+  </section>
 </main>
 
 <script src="../assets/js/main.js"></script>

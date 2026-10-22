@@ -15,7 +15,10 @@
 .rule img{width:30px;}
 
 /* ---------- swipe galleries ---------- */
-.swipe-wrap{position:relative;}
+.swipe-wrap{position:relative;--fade-l:28px;--fade-r:46px;}
+/* маска по краях лише з того боку, де ще є картки (класи ставить main.js) */
+.swipe-wrap.at-start{--fade-l:0px;}
+.swipe-wrap.at-end{--fade-r:0px;}
 .swipe{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
   margin:0 calc(var(--pad)*-1);padding:2px var(--pad) 16px;-webkit-overflow-scrolling:touch;}
 .swipe::-webkit-scrollbar{display:none;}
@@ -31,7 +34,7 @@
 .sw-arrow:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
 .sw-arrow.left{left:-21px;}
 .sw-arrow.right{right:-21px;}
-.sw-arrow[disabled]{opacity:.35;pointer-events:none;}
+.sw-arrow[disabled]{opacity:0;pointer-events:none;}
 
 .dots{display:flex;justify-content:center;gap:6px;}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--line);transition:.25s;}
@@ -43,9 +46,9 @@
 .fld::placeholder{color:#8ea9a4;}
 .fld:focus{outline:2px solid var(--orange);outline-offset:1px;background:#fff;}
 .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 15px;}
-.seg label{border:1px solid var(--line);border-radius:12px;padding:12px 4px;font-size:12px;font-weight:700;
+.seg label{position:relative;cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:12px 4px;font-size:12px;font-weight:700;
   display:flex;flex-direction:column;align-items:center;gap:5px;transition:.15s;}
-.seg input{display:none;}
+.seg input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;}
 .seg label:has(input:checked){background:var(--mint);border-color:var(--teal);}
 
 /* ---------- bubbles (декоративні бульбашки) ---------- */

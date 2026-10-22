@@ -18,10 +18,10 @@
 <!-- ============ HEADER ============ -->
 <header id="hdr">
   <div class="nav">
-    <a href="index.html" class="logo"><img src="assets/img/trident.webp" alt="">Neptun</a>
+    <a href="index.html" class="logo" aria-label="Neptun — на головну"><img src="assets/img/trident.webp" alt="" width="61" height="71">Neptun</a>
     <nav class="nlinks">
-      <button class="ntrig" data-mega="1">Віртуальна АТС <span class="car">&#9662;</span></button>
-      <button class="ntrig" data-mega="1">Для бізнесу <span class="car">&#9662;</span></button>
+      <button class="ntrig" type="button" data-mega="1" aria-expanded="false" aria-controls="mega">Віртуальна АТС <span class="car">&#9662;</span></button>
+      <button class="ntrig" type="button" data-mega="1" aria-expanded="false" aria-controls="mega">Для бізнесу <span class="car">&#9662;</span></button>
       <a href="#smart">Автодайлер / Smart Calls</a>
       <a href="#testi">Кейси</a>
       <a href="#faq">Ціни</a>
@@ -34,7 +34,7 @@
         <a href="#form" class="btn b-outline">Увійти</a>
         <a href="#form" class="btn b-orange">Зареєструватися</a>
       </div>
-      <button class="burger" id="bg" aria-label="Меню"><span></span><span></span><span></span></button>
+      <button class="burger" id="bg" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
     </div>
   </div>
 
@@ -42,22 +42,22 @@
     <div class="mega-in">
       <div class="mcol">
         <h4><a href="docs/ats.html">Віртуальна АТС</a></h4>
-        <a href="docs/ats-connect.html"><img src="assets/img/eco_anchor.webp" alt="">Як підключити</a>
-        <a href="docs/ats-features.html"><img src="assets/img/eco_wheel.webp" alt="">Можливості та функції</a>
-        <a href="docs/ats-numbers.html"><img src="assets/img/eco_horn.webp" alt="">Віртуальні номери</a>
-        <a href="docs/ats-crm.html"><img src="assets/img/eco_compass.webp" alt="">Інтеграції з CRM</a>
-        <a href="docs/ats-pricing.html"><img src="assets/img/eco_diving.webp" alt="">Тарифи на віртуальну АТС</a>
+        <a href="docs/ats-connect.html"><img src="assets/img/eco_anchor.webp" alt="" width="103" height="145">Як підключити</a>
+        <a href="docs/ats-features.html"><img src="assets/img/eco_wheel.webp" alt="" width="103" height="138">Можливості та функції</a>
+        <a href="docs/ats-numbers.html"><img src="assets/img/eco_horn.webp" alt="" width="103" height="125">Віртуальні номери</a>
+        <a href="docs/ats-crm.html"><img src="assets/img/eco_compass.webp" alt="" width="103" height="133">Інтеграції з CRM</a>
+        <a href="docs/ats-pricing.html"><img src="assets/img/eco_diving.webp" alt="" width="103" height="126">Тарифи на віртуальну АТС</a>
       </div>
       <div class="mcol wide">
         <h4><a href="docs/biz.html">Для бізнесу</a></h4>
         <div class="mgrid">
-          <a href="docs/biz-trust.html"><img src="assets/img/eco_shell.webp" alt="">Номери, які підвищують довіру клієнтів</a>
-          <a href="docs/biz-intl.html"><img src="assets/img/eco_wheel.webp" alt="">Міжнародні номери без кордонів</a>
-          <a href="docs/biz-sales.html"><img src="assets/img/eco_compass.webp" alt="">Рішення для відділів продажів</a>
-          <a href="docs/biz-sms-api.html"><img src="assets/img/eco_treasure.webp" alt="">Номери з SMS, API та автоматизацією</a>
-          <a href="docs/biz-callcenter.html"><img src="assets/img/eco_bars.webp" alt="">Для колл-центрів та вихідних кампаній</a>
-          <a href="docs/biz-fast.html"><img src="assets/img/eco_horn.webp" alt="">Швидкий старт без KYC та бюрократії</a>
-          <a href="docs/biz-ecom.html"><img src="assets/img/eco_diving.webp" alt="">Для e-commerce та інтернет-магазинів</a>
+          <a href="docs/biz-trust.html"><img src="assets/img/eco_shell.webp" alt="" width="103" height="122">Номери, які підвищують довіру клієнтів</a>
+          <a href="docs/biz-intl.html"><img src="assets/img/eco_wheel.webp" alt="" width="103" height="138">Міжнародні номери без кордонів</a>
+          <a href="docs/biz-sales.html"><img src="assets/img/eco_compass.webp" alt="" width="103" height="133">Рішення для відділів продажів</a>
+          <a href="docs/biz-sms-api.html"><img src="assets/img/eco_treasure.webp" alt="" width="105" height="113">Номери з SMS, API та автоматизацією</a>
+          <a href="docs/biz-callcenter.html"><img src="assets/img/eco_bars.webp" alt="" width="103" height="117">Для колл-центрів та вихідних кампаній</a>
+          <a href="docs/biz-fast.html"><img src="assets/img/eco_horn.webp" alt="" width="103" height="125">Швидкий старт без KYC та бюрократії</a>
+          <a href="docs/biz-ecom.html"><img src="assets/img/eco_diving.webp" alt="" width="103" height="126">Для e-commerce та інтернет-магазинів</a>
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@
 
   <div class="mmenu" id="mm">
     <div class="msec">
-      <button class="msec-h">Віртуальна АТС <span class="car">&#9662;</span></button>
+      <button class="msec-h" type="button" aria-expanded="false">Віртуальна АТС <span class="car">&#9662;</span></button>
       <div class="msec-b"><div>
         <a href="docs/ats.html"><b>Огляд розділу</b></a>
         <a href="docs/ats-connect.html">Як підключити</a>
@@ -76,12 +76,13 @@
       </div></div>
     </div>
     <div class="msec">
-      <button class="msec-h">Для бізнесу <span class="car">&#9662;</span></button>
+      <button class="msec-h" type="button" aria-expanded="false">Для бізнесу <span class="car">&#9662;</span></button>
       <div class="msec-b"><div>
         <a href="docs/biz.html"><b>Огляд розділу</b></a>
         <a href="docs/biz-trust.html">Номери, які підвищують довіру клієнтів</a>
         <a href="docs/biz-intl.html">Міжнародні номери без кордонів</a>
         <a href="docs/biz-sales.html">Рішення для відділів продажів</a>
+        <a href="docs/biz-sms-api.html">Номери з SMS, API та автоматизацією</a>
         <a href="docs/biz-callcenter.html">Для колл-центрів та вихідних кампаній</a>
         <a href="docs/biz-ecom.html">Для e-commerce та інтернет-магазинів</a>
         <a href="docs/biz-fast.html">Швидкий старт без KYC</a>
@@ -106,7 +107,7 @@
   <div class="bubs" data-bubbles="12"></div>
 
   <div class="wrap hero-in">
-    <h1>Neptun <img class="tri" src="assets/img/trident.webp" alt=""> <span class="nw">IP-телефонія,</span><br>з якою починаються <span class="or">продажі</span></h1>
+    <h1>Neptun <img class="tri" src="assets/img/trident.webp" alt="" width="61" height="71"> <span class="nw">IP-телефонія,</span><br>з якою починаються <span class="or">продажі</span></h1>
     <p class="lead">Ваш компас у відкритому океані продажів</p>
     <ul class="usp">
       <li><i>&#10022;</i> Без KYC та документів</li>
@@ -120,18 +121,18 @@
       <a href="#form" class="btn b-outline">Отримати консультацію</a>
     </div>
     <div class="msgs">
-      <a href="#" class="msg">&#9992;&#65039;</a><a href="#" class="msg">&#128172;</a><a href="#" class="msg">&#128222;</a>
+      <a href="#" class="msg" aria-label="Telegram">&#9992;&#65039;</a><a href="#" class="msg" aria-label="WhatsApp">&#128172;</a><a href="tel:+380676667766" class="msg" aria-label="Зателефонувати">&#128222;</a>
     </div>
     <p class="hnote">Підключайтеся і вже через 15 хвилин робіть перші дзвінки</p>
   </div>
 
   <div class="scene">
-    <img class="sc-weed-l" src="assets/img/weed_l.webp" alt="">
-    <img class="sc-weed-r" src="assets/img/weed_r.webp" alt="">
-    <img class="sc-bed"    src="assets/img/seabed.webp" alt="">
-    <img class="sc-merman" src="assets/img/h_merman.webp" alt="">
-    <img class="sc-shell"  src="assets/img/h_shell.webp" alt="">
-    <img class="sc-mermaid" src="assets/img/h_mermaid.webp" alt="">
+    <img class="sc-weed-l" src="assets/img/weed_l.webp" alt="" width="150" height="441">
+    <img class="sc-weed-r" src="assets/img/weed_r.webp" alt="" width="150" height="455">
+    <img class="sc-bed"    src="assets/img/seabed.webp" alt="" width="820" height="83">
+    <img class="sc-merman" src="assets/img/h_merman.webp" alt="" width="233" height="563">
+    <img class="sc-shell"  src="assets/img/h_shell.webp" alt="" width="150" height="96">
+    <img class="sc-mermaid" src="assets/img/h_mermaid.webp" alt="" width="300" height="278">
   </div>
 </section>
 
@@ -140,27 +141,27 @@
   <div class="wrap">
     <div class="head">
       <span class="tag">Проблема</span>
-      <h2>Відділ продажів штормить?<br><span class="or">Маємо рішення</span> <img class="tri" src="assets/img/trident.webp" alt=""></h2>
+      <h2>Відділ продажів штормить?<br><span class="or">Маємо рішення</span> <img class="tri" src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></h2>
       <p>Віртуальна АТС Neptun</p>
     </div>
     <div class="swipe-wrap prob-wrap">
-      <button class="sw-arrow left" data-sw="d1" data-dir="-1" aria-label="Назад">&#8592;</button>
+      <button type="button" class="sw-arrow left" data-sw="d1" data-dir="-1" aria-label="Назад">&#8592;</button>
       <div class="swipe" data-d="d1">
-        <article class="pcard"><img src="assets/img/prob_kyc.webp" alt="">
+        <article class="pcard"><img src="assets/img/prob_kyc.webp" alt="" width="240" height="116" loading="lazy" decoding="async">
           <div class="pb"><h3>Бюрократія і KYC</h3><p>Більше не потрібно збирати документи та проходити довгі перевірки. Старт за 15 хв без KYC.</p></div></article>
-        <article class="pcard"><img src="assets/img/prob_treasure.webp" alt="">
+        <article class="pcard"><img src="assets/img/prob_treasure.webp" alt="" width="240" height="115" loading="lazy" decoding="async">
           <div class="pb"><h3>Дорогі міжнародні дзвінки</h3><p>Платіть тільки за фактичне з'єднання. Прозорі тарифи без прихованих платежів.</p></div></article>
-        <article class="pcard"><img src="assets/img/prob_wheel.webp" alt="">
+        <article class="pcard"><img src="assets/img/prob_wheel.webp" alt="" width="240" height="115" loading="lazy" decoding="async">
           <div class="pb"><h3>Складне налаштування</h3><p>Віртуальна АТС легка для роботи зразу після підключення. Інтуїтивний інтерфейс.</p></div></article>
-        <article class="pcard"><img src="assets/img/prob_diving.webp" alt="">
+        <article class="pcard"><img src="assets/img/prob_diving.webp" alt="" width="240" height="117" loading="lazy" decoding="async">
           <div class="pb"><h3>Втрачені дзвінки</h3><p>Жоден дзвінок не загубиться із Smart Calls. Більше відповідей — більше продажів.</p></div></article>
       </div>
-      <button class="sw-arrow right" data-sw="d1" data-dir="1" aria-label="Далі">&#8594;</button>
+      <button type="button" class="sw-arrow right" data-sw="d1" data-dir="1" aria-label="Далі">&#8594;</button>
     </div>
     <div class="dots" id="d1"></div>
     <div class="btns" style="margin-top:24px"><a href="#form" class="btn b-orange">⛵ Поставити вітрила</a></div>
   </div>
-  <img class="bed-btm" src="assets/img/seabed.webp" alt="">
+  <img class="bed-btm" src="assets/img/seabed.webp" alt="" width="820" height="83" loading="lazy" decoding="async">
 </section>
 
 <!-- ============ BENEFITS ============ -->
@@ -169,23 +170,23 @@
     <div class="head">
       <span class="tag">Переваги</span>
       <h2>Закрийте головні проблеми з телефонією</h2>
-      <div class="pos-wrap"><span class="pos-word">Переваги</span><img class="poseidon" src="assets/img/poseidon2.webp" alt=""></div>
+      <div class="pos-wrap"><span class="pos-word">Переваги</span><img class="poseidon" src="assets/img/poseidon2.webp" alt="" width="400" height="216" loading="lazy" decoding="async"></div>
     </div>
     <div class="bgrid">
-      <div class="bcard"><img src="assets/img/ben_coins.webp" alt=""><div class="b-txt"><span class="bn">1</span><h3>Дорогі міжнародні дзвінки</h3><div class="b-line"></div><div class="st">Економія до 40%</div></div></div>
-      <div class="bcard"><img src="assets/img/ben_clock.webp" alt=""><div class="b-txt"><span class="bn">2</span><h3>Довга бюрократична реєстрація</h3><div class="b-line"></div><div class="st">Запуск за 15 хвилин без документів</div></div></div>
-      <div class="bcard"><img src="assets/img/ben_chart.webp" alt=""><div class="b-txt"><span class="bn">3</span><h3>Втрачений контроль та аналітика</h3><div class="b-line"></div><div class="st">Статистика дзвінків, записи та аналітика в реальному часі</div></div></div>
-      <div class="bcard"><img src="assets/img/ben_shield.webp" alt=""><div class="b-txt"><span class="bn">4</span><h3>Низька якість зв'язку</h3><div class="b-line"></div><div class="st">Стабільні дзвінки по всьому світу</div></div></div>
+      <div class="bcard"><img src="assets/img/ben_coins.webp" alt="" width="200" height="160" loading="lazy" decoding="async"><div class="b-txt"><span class="bn">1</span><h3>Дорогі міжнародні дзвінки</h3><div class="b-line"></div><div class="st">Економія до 40%</div></div></div>
+      <div class="bcard"><img src="assets/img/ben_clock.webp" alt="" width="200" height="147" loading="lazy" decoding="async"><div class="b-txt"><span class="bn">2</span><h3>Довга бюрократична реєстрація</h3><div class="b-line"></div><div class="st">Запуск за 15 хвилин без документів</div></div></div>
+      <div class="bcard"><img src="assets/img/ben_chart.webp" alt="" width="200" height="149" loading="lazy" decoding="async"><div class="b-txt"><span class="bn">3</span><h3>Втрачений контроль та аналітика</h3><div class="b-line"></div><div class="st">Статистика дзвінків, записи та аналітика в реальному часі</div></div></div>
+      <div class="bcard"><img src="assets/img/ben_shield.webp" alt="" width="200" height="145" loading="lazy" decoding="async"><div class="b-txt"><span class="bn">4</span><h3>Низька якість зв'язку</h3><div class="b-line"></div><div class="st">Стабільні дзвінки по всьому світу</div></div></div>
     </div>
     <div class="btns" style="margin-top:26px"><a href="#form" class="btn b-orange">Підвищити ефективність →</a></div>
   </div>
 </section>
 
 <!-- ============ JOURNEY ============ -->
-<section class="sec journey">
+<section class="sec journey" id="journey">
   <div class="wrap">
     <div class="jtop">
-      <img class="mirror" src="assets/img/mirror.webp" alt="">
+      <img class="mirror" src="assets/img/mirror.webp" alt="" width="300" height="447" loading="lazy" decoding="async">
       <div>
         <span class="tag">Шлях клієнта</span>
         <h2>5 простих кроків, щоб вийти у відкрите море зв'язку</h2>
@@ -195,27 +196,27 @@
     <div>
         <div class="steps">
           <div class="step on">
-            <button class="step-h"><span class="step-n">01</span><span class="step-t">Знайомство з системою</span><span class="step-c">&#9660;</span></button>
+            <button class="step-h" type="button" aria-expanded="true"><span class="step-n">01</span><span class="step-t">Знайомство з системою</span><span class="step-c">&#9660;</span></button>
             <div class="step-b"><div><p>Наша команда проводить презентацію та зустріч щодо співробітництва.</p></div></div>
           </div>
           <div class="step">
-            <button class="step-h"><span class="step-n">02</span><span class="step-t">Оплата</span><span class="step-c">&#9660;</span></button>
+            <button class="step-h" type="button" aria-expanded="false"><span class="step-n">02</span><span class="step-t">Оплата</span><span class="step-c">&#9660;</span></button>
             <div class="step-b"><div><p>Поповніть баланс зручним способом.</p></div></div>
           </div>
           <div class="step">
-            <button class="step-h"><span class="step-n">03</span><span class="step-t">Початок роботи</span><span class="step-c">&#9660;</span></button>
+            <button class="step-h" type="button" aria-expanded="false"><span class="step-n">03</span><span class="step-t">Початок роботи</span><span class="step-c">&#9660;</span></button>
             <div class="step-b"><div><p>Одразу після поповнення балансу ви можете почати дзвонити.</p></div></div>
           </div>
           <div class="step">
-            <button class="step-h"><span class="step-n">04</span><span class="step-t">Підключення номерів та АТС</span><span class="step-c">&#9660;</span></button>
+            <button class="step-h" type="button" aria-expanded="false"><span class="step-n">04</span><span class="step-t">Підключення номерів та АТС</span><span class="step-c">&#9660;</span></button>
             <div class="step-b"><div><p>Оберіть потрібні номери та налаштуйте вашу АТС.</p></div></div>
           </div>
           <div class="step">
-            <button class="step-h"><span class="step-n">05</span><span class="step-t">Інтеграція з CRM</span><span class="step-c">&#9660;</span></button>
+            <button class="step-h" type="button" aria-expanded="false"><span class="step-n">05</span><span class="step-t">Інтеграція з CRM</span><span class="step-c">&#9660;</span></button>
             <div class="step-b"><div><p>Підключіть CRM, щоб отримувати аналітику, звіти та автоматизувати процеси.</p></div></div>
           </div>
         </div>
-        <div class="jnote"><img src="assets/img/trident.webp" alt=""><div>Інтеграція не є обов'язковою для старту. Після поповнення балансу можна одразу здійснювати дзвінки.</div></div>
+        <div class="jnote"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"><div>Інтеграція не є обов'язковою для старту. Після поповнення балансу можна одразу здійснювати дзвінки.</div></div>
         <div class="jcta">
           <h4>Потрібні дзвінки вже зараз?</h4>
           <p>Поповніть баланс і починайте телефонувати за лічені хвилини.</p>
@@ -232,24 +233,24 @@
 <!-- ============ ECOSYSTEM ============ -->
 <section class="sec eco">
   <div class="wrap">
-    <img class="ecofish" src="assets/img/ecofish.webp" alt="">
+    <img class="ecofish" src="assets/img/ecofish.webp" alt="" width="760" height="65" loading="lazy" decoding="async">
     <div class="head">
       <h2>Екосистема Neptun</h2>
       <p>Все, що потрібно для ефективних продажів</p>
     </div>
     <div class="swipe-wrap eco-wrap">
-      <button class="sw-arrow left" data-dir="-1" aria-label="Назад">&#8592;</button>
+      <button type="button" class="sw-arrow left" data-dir="-1" aria-label="Назад">&#8592;</button>
       <div class="egrid">
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_anchor.webp" alt=""><h3>Віртуальні номери (DID + SMS)</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Локальні та міжнародні номери. Отримуйте дзвінки і повідомлення в будь-якій точці світу.</p></div>
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_shell.webp" alt=""><h3>Віртуальна АТС</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Повноцінна хмарна АТС для бізнесу. Гнучкі налаштування, маршрутизація та розподіл дзвінків.</p></div>
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_wheel.webp" alt=""><h3>Автодайлер + Smart Calls</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Обдзвін клієнтської бази в автоматичному режимі. Smart Calls розподіляє дзвінки та підвищує конверсію.</p></div>
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_horn.webp" alt=""><h3>Інтеграції з CRM / API</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Легка інтеграція з CRM, внутрішніми сервісами та кастомними рішеннями через API.</p></div>
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_compass.webp" alt=""><h3>Детальна аналітика</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Детальна статистика, записи дзвінків і аналітика ефективності операторів у реальному часі.</p></div>
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_diving.webp" alt=""><h3>Високий рівень безпеки</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Шифрування даних, захист від шахрайства та стабільна інфраструктура на рівні світових стандартів.</p></div>
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_treasure.webp" alt=""><h3>AI-дзвінки</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Інтелектуальні голосові AI-агенти проводять розмови з лідами 24/7 та передають гарячих клієнтів операторам.</p></div>
-      <div class="ecard"><div class="ehead"><img src="assets/img/eco_bars.webp" alt=""><h3>HLR-перевірка номерів</h3></div><div class="edash"><img src="assets/img/trident.webp" alt=""></div><p>Перевірка доступності номерів перед дзвінком, зниження витрат та підвищення якості бази.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_anchor.webp" alt="" width="103" height="145" loading="lazy" decoding="async"><h3>Віртуальні номери (DID + SMS)</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Локальні та міжнародні номери. Отримуйте дзвінки і повідомлення в будь-якій точці світу.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_shell.webp" alt="" width="103" height="122" loading="lazy" decoding="async"><h3>Віртуальна АТС</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Повноцінна хмарна АТС для бізнесу. Гнучкі налаштування, маршрутизація та розподіл дзвінків.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_wheel.webp" alt="" width="103" height="138" loading="lazy" decoding="async"><h3>Автодайлер + Smart Calls</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Обдзвін клієнтської бази в автоматичному режимі. Smart Calls розподіляє дзвінки та підвищує конверсію.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_horn.webp" alt="" width="103" height="125" loading="lazy" decoding="async"><h3>Інтеграції з CRM / API</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Легка інтеграція з CRM, внутрішніми сервісами та кастомними рішеннями через API.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_compass.webp" alt="" width="103" height="133" loading="lazy" decoding="async"><h3>Детальна аналітика</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Детальна статистика, записи дзвінків і аналітика ефективності операторів у реальному часі.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_diving.webp" alt="" width="103" height="126" loading="lazy" decoding="async"><h3>Високий рівень безпеки</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Шифрування даних, захист від шахрайства та стабільна інфраструктура на рівні світових стандартів.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_treasure.webp" alt="" width="105" height="113" loading="lazy" decoding="async"><h3>AI-дзвінки</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Інтелектуальні голосові AI-агенти проводять розмови з лідами 24/7 та передають гарячих клієнтів операторам.</p></div>
+      <div class="ecard"><div class="ehead"><img src="assets/img/eco_bars.webp" alt="" width="103" height="117" loading="lazy" decoding="async"><h3>HLR-перевірка номерів</h3></div><div class="edash"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></div><p>Перевірка доступності номерів перед дзвінком, зниження витрат та підвищення якості бази.</p></div>
       </div>
-      <button class="sw-arrow right" data-dir="1" aria-label="Далі">&#8594;</button>
+      <button type="button" class="sw-arrow right" data-dir="1" aria-label="Далі">&#8594;</button>
     </div>
   </div>
 </section>
@@ -258,17 +259,17 @@
 <section class="sec biz" id="biz">
   <div class="wrap">
     <div class="head">
-      <h2>Оберіть свій тип бізнесу <img class="tri" src="assets/img/trident.webp" alt=""></h2>
+      <h2>Оберіть свій тип бізнесу <img class="tri" src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></h2>
       <p>Готові рішення Віртуальної АТС — від крижаних лідів до гарячих VIP клієнтів</p>
     </div>
-    <div class="tabs">
-      <button class="tab on" data-t="fin"><img src="assets/img/tab_shell_plain.webp" alt="">FinTech</button>
-      <button class="tab" data-t="ec"><img src="assets/img/tab_shell_plain.webp" alt="">E-commerce</button>
-      <button class="tab" data-t="intl"><img src="assets/img/tab_shell_plain.webp" alt="">Міжнародний бізнес</button>
-      <button class="tab" data-t="other"><img src="assets/img/tab_shell_plain.webp" alt="">Та інші типи бізнесу</button>
+    <div class="tabs" role="tablist">
+      <button class="tab on" type="button" role="tab" aria-selected="true" aria-controls="p-fin" data-t="fin"><img src="assets/img/tab_shell_plain.webp" alt="" width="43" height="37" loading="lazy" decoding="async">FinTech</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="p-ec" data-t="ec"><img src="assets/img/tab_shell_plain.webp" alt="" width="43" height="37" loading="lazy" decoding="async">E-commerce</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="p-intl" data-t="intl"><img src="assets/img/tab_shell_plain.webp" alt="" width="43" height="37" loading="lazy" decoding="async">Міжнародний бізнес</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="p-other" data-t="other"><img src="assets/img/tab_shell_plain.webp" alt="" width="43" height="37" loading="lazy" decoding="async">Та інші типи бізнесу</button>
     </div>
 
-    <div class="pane on" id="p-fin"><div class="pc"><div>
+    <div class="pane on" id="p-fin" role="tabpanel"><div class="pc"><div>
       <h3>Рішення для FinTech-компаній</h3>
       <p>Підключайте міжнародні номери, автоматизуйте вихідні дзвінки та контролюйте роботу менеджерів в одному кабінеті. HLR-перевірка захищає від недоступних номерів.</p>
       <ul class="bfeat"><li>Віртуальні номери</li><li>Smart Calls</li><li>Автодайлер</li><li>HLR-перевірка</li><li>AI-дзвінки</li><li>Запис дзвінків</li><li>Dashboard</li><li>CRM / API</li></ul>
@@ -276,15 +277,15 @@
     </div><div>
       <div class="livedash"></div>
       <div class="fstrip">
-          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt=""><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
-          <div class="fcell"><img src="assets/img/fi_ai.webp" alt=""><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
-          <div class="fcell"><img src="assets/img/fi_dial.webp" alt=""><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
-          <div class="fcell"><img src="assets/img/fi_agent.webp" alt=""><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
-          <div class="fcell"><img src="assets/img/fi_int.webp" alt=""><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
+          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt="" width="33" height="33" loading="lazy" decoding="async"><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
+          <div class="fcell"><img src="assets/img/fi_ai.webp" alt="" width="30" height="34" loading="lazy" decoding="async"><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
+          <div class="fcell"><img src="assets/img/fi_dial.webp" alt="" width="25" height="33" loading="lazy" decoding="async"><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
+          <div class="fcell"><img src="assets/img/fi_agent.webp" alt="" width="27" height="35" loading="lazy" decoding="async"><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
+          <div class="fcell"><img src="assets/img/fi_int.webp" alt="" width="31" height="33" loading="lazy" decoding="async"><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
         </div>
     </div></div></div>
 
-    <div class="pane" id="p-ec"><div class="pc"><div>
+    <div class="pane" id="p-ec" role="tabpanel"><div class="pc"><div>
       <h3>Рішення для E-commerce</h3>
       <p>Підтверджуйте замовлення швидше, обробляйте більше звернень і не втрачайте жодного ліда. AI-дзвінки підтверджують замовлення та передають складні випадки операторам.</p>
       <ul class="bfeat"><li>Підтвердження AI</li><li>Автодайлер</li><li>Розподіл дзвінків</li><li>Запис дзвінків</li><li>Інтеграція CRM</li><li>SMS-сповіщення</li><li>Dashboard</li><li>HLR-перевірка</li></ul>
@@ -292,15 +293,15 @@
     </div><div>
       <div class="livedash"></div>
       <div class="fstrip">
-          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt=""><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
-          <div class="fcell"><img src="assets/img/fi_ai.webp" alt=""><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
-          <div class="fcell"><img src="assets/img/fi_dial.webp" alt=""><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
-          <div class="fcell"><img src="assets/img/fi_agent.webp" alt=""><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
-          <div class="fcell"><img src="assets/img/fi_int.webp" alt=""><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
+          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt="" width="33" height="33" loading="lazy" decoding="async"><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
+          <div class="fcell"><img src="assets/img/fi_ai.webp" alt="" width="30" height="34" loading="lazy" decoding="async"><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
+          <div class="fcell"><img src="assets/img/fi_dial.webp" alt="" width="25" height="33" loading="lazy" decoding="async"><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
+          <div class="fcell"><img src="assets/img/fi_agent.webp" alt="" width="27" height="35" loading="lazy" decoding="async"><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
+          <div class="fcell"><img src="assets/img/fi_int.webp" alt="" width="31" height="33" loading="lazy" decoding="async"><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
         </div>
     </div></div></div>
 
-    <div class="pane" id="p-intl"><div class="pc"><div>
+    <div class="pane" id="p-intl" role="tabpanel"><div class="pc"><div>
       <h3>Рішення для міжнародного бізнесу</h3>
       <p>Підключайте номери у будь-якій країні, керуйте командою з різних часових поясів та отримуйте прозору аналітику по кожному ринку окремо.</p>
       <ul class="bfeat"><li>Номери 100+ країн</li><li>Мультивалютність</li><li>Локальні call-центри</li><li>Багатомовні AI</li><li>Аналітика регіонів</li><li>API мультибренду</li><li>Dashboard</li><li>Підтримка 24/7</li></ul>
@@ -308,15 +309,15 @@
     </div><div>
       <div class="livedash"></div>
       <div class="fstrip">
-          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt=""><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
-          <div class="fcell"><img src="assets/img/fi_ai.webp" alt=""><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
-          <div class="fcell"><img src="assets/img/fi_dial.webp" alt=""><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
-          <div class="fcell"><img src="assets/img/fi_agent.webp" alt=""><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
-          <div class="fcell"><img src="assets/img/fi_int.webp" alt=""><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
+          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt="" width="33" height="33" loading="lazy" decoding="async"><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
+          <div class="fcell"><img src="assets/img/fi_ai.webp" alt="" width="30" height="34" loading="lazy" decoding="async"><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
+          <div class="fcell"><img src="assets/img/fi_dial.webp" alt="" width="25" height="33" loading="lazy" decoding="async"><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
+          <div class="fcell"><img src="assets/img/fi_agent.webp" alt="" width="27" height="35" loading="lazy" decoding="async"><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
+          <div class="fcell"><img src="assets/img/fi_int.webp" alt="" width="31" height="33" loading="lazy" decoding="async"><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
         </div>
     </div></div></div>
 
-    <div class="pane" id="p-other"><div class="pc"><div>
+    <div class="pane" id="p-other" role="tabpanel"><div class="pc"><div>
       <h3>Рішення для інших типів бізнесу</h3>
       <p>Не знайшли свою нішу серед прикладів вище? Екосистема Neptun гнучко налаштовується під будь-який сценарій — від логістики та освіти до медицини й агентств нерухомості.</p>
       <ul class="bfeat"><li>Гнучка маршрутизація</li><li>Автодайлер</li><li>Smart Calls</li><li>HLR-перевірка</li><li>AI-дзвінки</li><li>Запис дзвінків</li><li>Dashboard</li><li>CRM / API</li></ul>
@@ -324,11 +325,11 @@
     </div><div>
       <div class="livedash"></div>
       <div class="fstrip">
-          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt=""><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
-          <div class="fcell"><img src="assets/img/fi_ai.webp" alt=""><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
-          <div class="fcell"><img src="assets/img/fi_dial.webp" alt=""><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
-          <div class="fcell"><img src="assets/img/fi_agent.webp" alt=""><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
-          <div class="fcell"><img src="assets/img/fi_int.webp" alt=""><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
+          <div class="fcell"><img src="assets/img/fi_hlr.webp" alt="" width="33" height="33" loading="lazy" decoding="async"><h4>HLR-перевірка</h4><p>Фільтрація недоступних та неіснуючих номерів</p></div>
+          <div class="fcell"><img src="assets/img/fi_ai.webp" alt="" width="30" height="34" loading="lazy" decoding="async"><h4>ШІ-дзвінки</h4><p>Автоматичне спілкування, кваліфікація та прогрів лідів</p></div>
+          <div class="fcell"><img src="assets/img/fi_dial.webp" alt="" width="25" height="33" loading="lazy" decoding="async"><h4>Автодайлер</h4><p>Масові вихідні дзвінки без ручного набору</p></div>
+          <div class="fcell"><img src="assets/img/fi_agent.webp" alt="" width="27" height="35" loading="lazy" decoding="async"><h4>AI-аналітика</h4><p>Розпізнавання намірів та рекомендації для підвищення конверсії</p></div>
+          <div class="fcell"><img src="assets/img/fi_int.webp" alt="" width="31" height="33" loading="lazy" decoding="async"><h4>Інтеграції</h4><p>CRM, API, Webhooks та інші сервіси</p></div>
         </div>
     </div></div></div>
   </div>
@@ -337,9 +338,9 @@
 <!-- ============ SMART ============ -->
 <section class="sec smart" id="smart">
   <div class="wrap">
-    <div class="sfish"><img src="assets/img/fish_l.webp" alt=""><img src="assets/img/fish_r.webp" alt=""></div>
+    <div class="sfish"><img src="assets/img/fish_l.webp" alt="" width="345" height="112" loading="lazy" decoding="async"><img src="assets/img/fish_r.webp" alt="" width="420" height="108" loading="lazy" decoding="async"></div>
     <div class="head">
-      <h2>Smart Calls — розумні дзвінки, які збільшують продажі <img class="tri" src="assets/img/trident.webp" alt=""></h2>
+      <h2>Smart Calls — розумні дзвінки, які збільшують продажі <img class="tri" src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></h2>
       <p>Автоматизація дзвінків, AI-аналітика та детальна статистика допомагають отримувати максимальний результат.</p>
     </div>
     <div class="sgrid">
@@ -350,10 +351,10 @@
         <div class="si"><div class="ic">&#128737;&#65039;</div><div><h4>Приймайте рішення на основі даних</h4><p>Чіткі звіти та дашборди допомагають масштабувати бізнес впевнено.</p></div></div>
       </div>
       <div class="srow">
-        <div class="stone"><img src="assets/img/stone.webp" alt=""></div>
+        <div class="stone"><img src="assets/img/stone.webp" alt="Відповіді +63%, конверсія в продажі +47%, економія бюджету −32%" width="330" height="494" loading="lazy" decoding="async"></div>
         <div class="scharts">
-          <img src="assets/img/smart_chart.webp" alt="">
-          <img src="assets/img/smart_kpis.webp" alt="">
+          <img src="assets/img/smart_chart.webp" alt="Графік динаміки дзвінків за тиждень" width="436" height="230" loading="lazy" decoding="async">
+          <img src="assets/img/smart_kpis.webp" alt="Показники: 12 560 успішних дзвінків (+24%), конверсія 24,7% (+18%)" width="436" height="205" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -377,19 +378,19 @@
     <div class="head">
       <h2>Кейси / відгуки</h2>
       <p>Хто вже проклав свій маршрут</p>
-      <div class="rule"><img src="assets/img/h_shell.webp" alt=""></div>
+      <div class="rule"><img src="assets/img/h_shell.webp" alt="" width="150" height="96" loading="lazy" decoding="async"></div>
     </div>
     <div class="swipe-wrap testi-wrap">
-      <button class="sw-arrow left" data-sw="d2" data-dir="-1" aria-label="Назад">&#8592;</button>
+      <button type="button" class="sw-arrow left" data-sw="d2" data-dir="-1" aria-label="Назад">&#8592;</button>
       <div class="swipe" data-d="d2">
-      <article class="tcard"><span class="ttag">E-commerce</span><div class="stars">★★★★★</div><p>Збільшили кількість відповідей на дзвінки на 38% вже у перший місяць роботи.</p><div class="tname">Олександр Т.</div><div class="trole">Marketing Director</div><img src="assets/img/t_fish_school.webp" alt=""><span class="tcard-ico ic-fish"></span></article>
-      <article class="tcard"><span class="ttag">FinTech</span><div class="stars">★★★★★</div><p>AI-аналітика допомогла нам зрозуміти клієнтів і підняти конверсію на 31%.</p><div class="tname">Марія І.</div><div class="trole">Head of Growth</div><img src="assets/img/t_jellyfish.webp" alt=""><span class="tcard-ico ic-jelly"></span></article>
-      <article class="tcard"><span class="ttag">Call-центр</span><div class="stars">★★★★★</div><p>Оптимізували роботу операторів і зменшили витрати на 26%.</p><div class="tname">Дмитро К.</div><div class="trole">CEO</div><img src="assets/img/t_shark.webp" alt=""><span class="tcard-ico ic-shark"></span></article>
-      <article class="tcard"><span class="ttag">E-commerce</span><div class="stars">★★★★★</div><p>Завдяки HLR-перевірці зменшили кількість невалідних номерів на 45%.</p><div class="tname">Катерина С.</div><div class="trole">Head of CRM</div><img src="assets/img/t_fish_school2.webp" alt=""><span class="tcard-ico ic-fish2"></span></article>
-      <article class="tcard"><span class="ttag">Підтримка</span><div class="stars">★★★★★</div><p>Швидше з'єднання та AI-дзвінки підняли конверсію на 29%.</p><div class="tname">Андрій П.</div><div class="trole">Support Manager</div><img src="assets/img/t_crab.webp" alt=""><span class="tcard-ico ic-crab"></span></article>
-      <article class="tcard"><span class="ttag">Трейдинг</span><div class="stars">★★★★★</div><p>Система витримує великі навантаження, стабільна робота 24/7.</p><div class="tname">Ігор Б.</div><div class="trole">CTO</div><img src="assets/img/t_whale.webp" alt=""><span class="tcard-ico ic-whale"></span></article>
+      <article class="tcard"><span class="ttag">E-commerce</span><div class="stars">★★★★★</div><p>Збільшили кількість відповідей на дзвінки на 38% вже у перший місяць роботи.</p><div class="tname">Олександр Т.</div><div class="trole">Marketing Director</div><span class="tcard-ico ic-fish"></span></article>
+      <article class="tcard"><span class="ttag">FinTech</span><div class="stars">★★★★★</div><p>AI-аналітика допомогла нам зрозуміти клієнтів і підняти конверсію на 31%.</p><div class="tname">Марія І.</div><div class="trole">Head of Growth</div><span class="tcard-ico ic-jelly"></span></article>
+      <article class="tcard"><span class="ttag">Call-центр</span><div class="stars">★★★★★</div><p>Оптимізували роботу операторів і зменшили витрати на 26%.</p><div class="tname">Дмитро К.</div><div class="trole">CEO</div><span class="tcard-ico ic-shark"></span></article>
+      <article class="tcard"><span class="ttag">E-commerce</span><div class="stars">★★★★★</div><p>Завдяки HLR-перевірці зменшили кількість невалідних номерів на 45%.</p><div class="tname">Катерина С.</div><div class="trole">Head of CRM</div><span class="tcard-ico ic-fish2"></span></article>
+      <article class="tcard"><span class="ttag">Підтримка</span><div class="stars">★★★★★</div><p>Швидше з'єднання та AI-дзвінки підняли конверсію на 29%.</p><div class="tname">Андрій П.</div><div class="trole">Support Manager</div><span class="tcard-ico ic-crab"></span></article>
+      <article class="tcard"><span class="ttag">Трейдинг</span><div class="stars">★★★★★</div><p>Система витримує великі навантаження, стабільна робота 24/7.</p><div class="tname">Ігор Б.</div><div class="trole">CTO</div><span class="tcard-ico ic-whale"></span></article>
 </div>
-      <button class="sw-arrow right" data-sw="d2" data-dir="1" aria-label="Далі">&#8594;</button>
+      <button type="button" class="sw-arrow right" data-sw="d2" data-dir="1" aria-label="Далі">&#8594;</button>
     </div>
     <div class="dots" id="d2"></div>
   </div>
@@ -401,9 +402,9 @@
     <div class="tbox">
       <div class="tlab">Нам довіряють</div>
       <div class="logos">
-        <img src="assets/img/logo_vike.webp" alt=""><img src="assets/img/logo_siphone.webp" alt=""><img src="assets/img/logo_seatube.webp" alt="">
-        <img src="assets/img/logo_seacola.webp" alt=""><img src="assets/img/logo_doogle.webp" alt=""><img src="assets/img/logo_aquadas.webp" alt="">
-        <img src="assets/img/logo_mcdeep.webp" alt=""><img src="assets/img/logo_wheel.webp" alt=""><img src="assets/img/logo_starship.webp" alt="">
+        <img src="assets/img/logo_vike.webp" alt="Vike" width="97" height="77" loading="lazy" decoding="async"><img src="assets/img/logo_siphone.webp" alt="siPhone" width="130" height="77" loading="lazy" decoding="async"><img src="assets/img/logo_seatube.webp" alt="SeaTube" width="115" height="77" loading="lazy" decoding="async">
+        <img src="assets/img/logo_seacola.webp" alt="SeaCola" width="118" height="77" loading="lazy" decoding="async"><img src="assets/img/logo_doogle.webp" alt="Doogle" width="112" height="77" loading="lazy" decoding="async"><img src="assets/img/logo_aquadas.webp" alt="Aquadas" width="99" height="77" loading="lazy" decoding="async">
+        <img src="assets/img/logo_mcdeep.webp" alt="McDeep" width="83" height="77" loading="lazy" decoding="async"><img src="assets/img/logo_wheel.webp" alt="Wheel" width="75" height="77" loading="lazy" decoding="async"><img src="assets/img/logo_starship.webp" alt="Starship" width="82" height="77" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -416,52 +417,51 @@
     <div class="head">
       <h2>FAQ</h2>
       <p>Часті питання з палуби</p>
-      <div class="rule"><img src="assets/img/h_shell.webp" alt=""></div>
+      <div class="rule"><img src="assets/img/h_shell.webp" alt="" width="150" height="96" loading="lazy" decoding="async"></div>
     </div>
     <div class="faq-list">
       <div class="fitem on">
-        <button class="fq"><span class="qi">?</span><span class="qt">Що таке Neptun?</span><span class="chev">▼</span></button>
-        <div class="fa"><p>Neptun — це платформа AI-дзвінків, аналітики та автоматизації, яка допомагає бізнесу приймати більше дзвінків, ефективно обробляти їх та збільшувати продажі.</p><img src="assets/img/faq_fish.webp" alt=""></div>
+        <button class="fq" type="button" aria-expanded="true"><span class="qi">?</span><span class="qt">Що таке Neptun?</span><span class="chev">▼</span></button>
+        <div class="fa"><p>Neptun — це платформа AI-дзвінків, аналітики та автоматизації, яка допомагає бізнесу приймати більше дзвінків, ефективно обробляти їх та збільшувати продажі.</p><img src="assets/img/faq_fish.webp" alt="" width="174" height="108" loading="lazy" decoding="async"></div>
       </div>
       <div class="fitem">
-        <button class="fq"><span class="qi">?</span><span class="qt">Як працюють AI-дзвінки?</span><span class="chev">▼</span></button>
+        <button class="fq" type="button" aria-expanded="false"><span class="qi">?</span><span class="qt">Як працюють AI-дзвінки?</span><span class="chev">▼</span></button>
         <div class="fa"><p>AI-агенти автоматично здійснюють вихідні дзвінки, кваліфікують ліди та за потреби передають розмову живому менеджеру.</p></div>
       </div>
       <div class="fitem">
-        <button class="fq"><span class="qi">?</span><span class="qt">Чи інтегрується Neptun з нашою CRM?</span><span class="chev">▼</span></button>
+        <button class="fq" type="button" aria-expanded="false"><span class="qi">?</span><span class="qt">Чи інтегрується Neptun з нашою CRM?</span><span class="chev">▼</span></button>
         <div class="fa"><p>Так, підключення відбувається через готові інтеграції або відкрите API.</p></div>
       </div>
       <div class="fitem">
-        <button class="fq"><span class="qi">?</span><span class="qt">Скільки часу займає впровадження?</span><span class="chev">▼</span></button>
+        <button class="fq" type="button" aria-expanded="false"><span class="qi">?</span><span class="qt">Скільки часу займає впровадження?</span><span class="chev">▼</span></button>
         <div class="fa"><p>Базове підключення — близько 15 хвилин, повне налаштування АТС і CRM — до кількох днів.</p></div>
       </div>
       <div class="fitem">
-        <button class="fq"><span class="qi">?</span><span class="qt">Які результати можна очікувати?</span><span class="chev">▼</span></button>
+        <button class="fq" type="button" aria-expanded="false"><span class="qi">?</span><span class="qt">Які результати можна очікувати?</span><span class="chev">▼</span></button>
         <div class="fa"><p>Клієнти повідомляють про зростання конверсії до 47% та зменшення витрат на дзвінки до 40%.</p></div>
       </div>
       <div class="fitem">
-        <button class="fq"><span class="qi">?</span><span class="qt">Які тарифи та умови співпраці?</span><span class="chev">▼</span></button>
+        <button class="fq" type="button" aria-expanded="false"><span class="qi">?</span><span class="qt">Які тарифи та умови співпраці?</span><span class="chev">▼</span></button>
         <div class="fa"><p>Тарифи залежать від обраного пакета послуг — зв'яжіться з нами для персональної пропозиції.</p></div>
       </div>
     </div>
-    <div class="form" id="form">
+    <form class="form" id="form" action="#" method="post" data-form novalidate>
       <h3>Отримати консультацію</h3>
-      <div class="rule"><img src="assets/img/h_shell.webp" alt=""></div>
-      <div style="height:20px"></div>
-      <input class="fld" placeholder="Ім'я" autocomplete="name">
-      <input class="fld" placeholder="Номер телефону" type="tel" inputmode="tel" autocomplete="tel">
-      <div class="seg">
-        <label><input type="radio" name="v" checked><span>✈️</span>Telegram</label>
-        <label><input type="radio" name="v"><span>💬</span>WhatsApp</label>
-        <label><input type="radio" name="v"><span>📞</span>Дзвінок</label>
+      <div class="rule"><img src="assets/img/h_shell.webp" alt="" width="150" height="96" loading="lazy" decoding="async"></div>
+      <input class="fld" name="name" placeholder="Ім'я" aria-label="Ім'я" autocomplete="name" required>
+      <input class="fld" name="phone" placeholder="Номер телефону" aria-label="Номер телефону" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+()\-\s]{7,}" required>
+      <div class="seg" role="radiogroup" aria-label="Як з вами зв'язатися">
+        <label><input type="radio" name="contact" value="telegram" checked><span aria-hidden="true">✈️</span>Telegram</label>
+        <label><input type="radio" name="contact" value="whatsapp"><span aria-hidden="true">💬</span>WhatsApp</label>
+        <label><input type="radio" name="contact" value="call"><span aria-hidden="true">📞</span>Дзвінок</label>
       </div>
-      <a href="#" class="btn b-orange">Отримати консультацію</a>
+      <button type="submit" class="btn b-orange">Отримати консультацію</button>
       <p class="fnote">Ми зв'яжемось з вами через:</p>
       <div class="via">
         <a href="#" class="btn b-dark">✈️ Telegram</a>
         <a href="#" class="btn b-dark">💬 WhatsApp</a>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 
@@ -470,29 +470,29 @@
   <div class="bubs" data-bubbles="8"></div>
   <div class="wrap">
     <div class="fcta-text">
-      <h2>Готові вийти<br>з гавані? <img class="tri" src="assets/img/trident.webp" alt=""></h2>
+      <h2>Готові вийти<br>з гавані? <img class="tri" src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async"></h2>
       <p class="fl">Ми поруч, щоб зробити кожен ваш дзвінок кроком до зростання.</p>
       <div class="btns">
         <a href="#form" class="btn b-orange">Запустити зв'язок →</a>
         <a href="#form" class="btn b-outline">Отримати консультацію →</a>
       </div>
     </div>
-    <img class="fmer" src="assets/img/f_mermaid.webp" alt="">
+    <img class="fmer" src="assets/img/f_mermaid.webp" alt="" width="360" height="339" loading="lazy" decoding="async">
   </div>
-  <img class="fwave" src="assets/img/fwave.webp" alt="">
-  <footer>
-    <div class="wrap foot-grid">
-      <div class="foot-col-l">
-        <div class="flogo"><img src="assets/img/trident.webp" alt="">Neptun</div>
-        <p class="fdesc">VoIP-телефонія для бізнесу. Допомагаємо збільшити продажі та не втрачати жодного ліда.</p>
-        <div class="fsoc"><a href="#">✈️</a><a href="#">💬</a><a href="#">📷</a></div>
-      </div>
-      <div class="foot-col-r">
-        <div class="flinks"><a href="#">Про нас</a><a href="#faq">Тарифи</a><a href="blog.html">Блог</a><a href="#form">Контакти</a></div>
-      </div>
-      <div class="fbot">Політика конфіденційності<br>Neptun © 2024 · Усі права захищені</div>
+  <img class="fwave" src="assets/img/fwave.webp" alt="" width="820" height="107" loading="lazy" decoding="async">
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-col-l">
+      <div class="flogo"><img src="assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async">Neptun</div>
+      <p class="fdesc">VoIP-телефонія для бізнесу. Допомагаємо збільшити продажі та не втрачати жодного ліда.</p>
+      <div class="fsoc"><a href="#" aria-label="Telegram">✈️</a><a href="#" aria-label="WhatsApp">💬</a><a href="#" aria-label="Instagram">📷</a></div>
     </div>
-  </footer>
+    <div class="foot-col-r">
+      <div class="flinks"><a href="index.html">Про нас</a><a href="#faq">Тарифи</a><a href="blog.html">Блог</a><a href="#form">Контакти</a></div>
+    </div>
+    <div class="fbot">Політика конфіденційності<br>Neptun © 2026 · Усі права захищені</div>
+  </div>
+</footer>
 </section>
 </main>
 

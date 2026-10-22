@@ -10,9 +10,10 @@
 
   /* ---------- таби типів бізнесу ---------- */
   document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
+    document.querySelectorAll('.tab').forEach(x => { x.classList.remove('on'); x.setAttribute('aria-selected', 'false'); });
     document.querySelectorAll('.pane').forEach(p => p.classList.remove('on'));
     t.classList.add('on');
+    t.setAttribute('aria-selected', 'true');
     const pane = document.getElementById('p-' + t.dataset.t);
     if (pane) pane.classList.add('on');
     t.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
@@ -23,8 +24,14 @@
     document.querySelectorAll(triggerSel).forEach(btn => btn.addEventListener('click', () => {
       const item = btn.parentElement;
       const wasOpen = item.classList.contains('on');
-      document.querySelectorAll(itemSel).forEach(x => x.classList.remove('on'));
-      if (!wasOpen) item.classList.add('on');
+      document.querySelectorAll(itemSel).forEach(x => {
+        x.classList.remove('on');
+        x.querySelector(triggerSel)?.setAttribute('aria-expanded', 'false');
+      });
+      if (!wasOpen) {
+        item.classList.add('on');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     }));
   }
   accordion('.step-h', '.step');

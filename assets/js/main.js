@@ -3,7 +3,7 @@
    - мобільне меню (бургер) + вкладені розділи
    - мега-меню (desktop)
    - слайдери: стрілки, drag мишею, точки-пагінація
-   - сегментні перемикачі (.bs)
+   - форми заявок (валідація)
    - липка кнопка CTA (mobile, тільки головна)
    - декоративні бульбашки
    ========================================================= */
@@ -17,13 +17,16 @@
   function closeMobileMenu() {
     if (!burger || !mmenu) return;
     burger.classList.remove('on');
+    burger.setAttribute('aria-expanded', 'false');
     mmenu.classList.remove('on');
   }
 
   if (burger && mmenu) {
     burger.addEventListener('click', () => {
-      burger.classList.toggle('on');
-      mmenu.classList.toggle('on');
+      const open = !mmenu.classList.contains('on');
+      burger.classList.toggle('on', open);
+      burger.setAttribute('aria-expanded', String(open));
+      mmenu.classList.toggle('on', open);
     });
     mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
   }
@@ -33,8 +36,14 @@
     btn.addEventListener('click', () => {
       const sec = btn.parentElement;
       const wasOpen = sec.classList.contains('on');
-      document.querySelectorAll('.msec').forEach(x => x.classList.remove('on'));
-      if (!wasOpen) sec.classList.add('on');
+      document.querySelectorAll('.msec').forEach(x => {
+        x.classList.remove('on');
+        x.querySelector('.msec-h')?.setAttribute('aria-expanded', 'false');
+      });
+      if (!wasOpen) {
+        sec.classList.add('on');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
@@ -42,26 +51,33 @@
   const mega = document.getElementById('mega');
   const hdr = document.getElementById('hdr');
   const trigs = [...document.querySelectorAll('.ntrig')];
+  const DESKTOP = 1100; // з цієї ширини показується повна навігація (див. layout.css)
 
   function closeMega() {
     if (!mega) return;
     mega.classList.remove('on');
-    trigs.forEach(t => t.classList.remove('on'));
+    trigs.forEach(t => { t.classList.remove('on'); t.setAttribute('aria-expanded', 'false'); });
+  }
+  function openMega(t) {
+    closeMega();
+    t.classList.add('on');
+    t.setAttribute('aria-expanded', 'true');
+    mega.classList.add('on');
   }
 
   if (mega && hdr) {
     trigs.forEach(t => {
       t.addEventListener('click', e => {
         e.stopPropagation();
-        const open = t.classList.contains('on');
-        closeMega();
-        if (!open) { t.classList.add('on'); mega.classList.add('on'); }
+        if (t.classList.contains('on')) closeMega();
+        else openMega(t);
       });
       t.addEventListener('mouseenter', () => {
-        if (window.innerWidth >= 1000) { closeMega(); t.classList.add('on'); mega.classList.add('on'); }
+        if (window.innerWidth >= DESKTOP) openMega(t);
       });
     });
-    hdr.addEventListener('mouseleave', () => { if (window.innerWidth >= 1000) closeMega(); });
+    hdr.addEventListener('mouseleave', () => { if (window.innerWidth >= DESKTOP) closeMega(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMega(); });
     document.addEventListener('click', e => { if (!mega.contains(e.target)) closeMega(); });
     addEventListener('scroll', closeMega, { passive: true });
   }
@@ -82,15 +98,20 @@
     }
     function updateArrows() {
       const max = track.scrollWidth - track.clientWidth - 2;
-      if (left) left.disabled = track.scrollLeft <= 2;
-      if (right) right.disabled = track.scrollLeft >= max;
+      const atStart = track.scrollLeft <= 2;
+      const atEnd = track.scrollLeft >= max;
+      if (left) left.disabled = atStart;
+      if (right) right.disabled = atEnd;
+      wrap.classList.toggle('at-start', atStart);
+      wrap.classList.toggle('at-end', atEnd);
     }
     btns.forEach(b => b.addEventListener('click', () => {
       track.scrollBy({ left: cardStep() * parseInt(b.dataset.dir, 10), behavior: 'smooth' });
     }));
     track.addEventListener('scroll', updateArrows, { passive: true });
     window.addEventListener('resize', updateArrows);
-    setTimeout(updateArrows, 300);
+    updateArrows();
+    window.addEventListener('load', updateArrows);
 
     let dragging = false, startX = 0, startLeft = 0, moved = false;
     track.addEventListener('pointerdown', e => {
@@ -135,13 +156,18 @@
     }, { passive: true });
   });
 
-  /* ---------- сегментні перемикачі (Telegram / WhatsApp / Дзвінок) ---------- */
-  document.querySelectorAll('.bl-seg').forEach(group => {
-    const items = group.querySelectorAll('.bs');
-    items.forEach(b => b.addEventListener('click', () => {
-      items.forEach(x => x.classList.remove('on'));
-      b.classList.add('on');
-    }));
+  /* ---------- форми заявок ----------
+     Поки що лише валідація. Відправка підключається на етапі WordPress
+     (Contact Form 7 / admin-ajax): дані форми приходять у події «neptun:lead». */
+  document.querySelectorAll('form[data-form]').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      form.dispatchEvent(new CustomEvent('neptun:lead', {
+        bubbles: true,
+        detail: Object.fromEntries(new FormData(form)),
+      }));
+    });
   });
 
   /* ---------- липка CTA-кнопка (mobile) ---------- */

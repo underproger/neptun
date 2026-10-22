@@ -10,6 +10,9 @@
 .bl-tags{display:flex;gap:9px;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;
   margin:24px calc(var(--pad)*-1) 0;padding:0 var(--pad) 6px;}
 .bl-tags::-webkit-scrollbar{display:none;}
+/* по центру, коли влазять; скрол, коли ні */
+.bl-tags>:first-child{margin-left:auto;}
+.bl-tags>:last-child{margin-right:auto;}
 .bf{flex:none;padding:10px 20px;border-radius:12px;background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.12);color:#cfe2de;font-size:13.5px;font-weight:700;transition:.18s;}
 .bf:hover{background:rgba(255,255,255,.15);}
@@ -40,9 +43,10 @@
 .fld.dark{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#fff;}
 .fld.dark::placeholder{color:#8fb0aa;}
 .bl-seg{display:flex;gap:8px;margin:4px 0 14px;flex-wrap:wrap;}
-.bs{padding:10px 18px;border-radius:30px;background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);color:#cfe2de;font-size:13px;font-weight:700;}
-.bs.on{background:var(--orange);border-color:var(--orange);color:#fff;}
+.bs{position:relative;cursor:pointer;padding:10px 18px;border-radius:30px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);color:#cfe2de;font-size:13px;font-weight:700;transition:.18s;}
+.bs input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;}
+.bs:has(input:checked){background:var(--orange);border-color:var(--orange);color:#fff;}
 .bl-or{text-align:center;font-size:12px;color:#8fb0aa;font-weight:600;margin:14px 0 10px;}
 .bl-via{display:flex;gap:10px;}
 .bl-via .btn{flex:1;}
@@ -74,4 +78,3 @@
   .bl-cta h2{font-size:32px;max-width:560px;}
   .bl-cta{padding-top:56px;}
 }
-.bpost[hidden]{display:none;}

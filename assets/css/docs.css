@@ -39,7 +39,8 @@
   .doc-hero{padding:34px 0 40px;}
   .doc-hero h1{font-size:34px;}
   .doc-cols{grid-template-columns:250px 1fr;gap:34px;}
-  .doc-nav{position:sticky;top:96px;}
+  /* align-self — інакше блок розтягується на всю висоту колонки і sticky не працює */
+  .doc-nav{position:sticky;top:84px;align-self:start;}
   .doc-body h2{font-size:21px;}
   .doc-body p,.doc-body li{font-size:15.5px;}
 }

@@ -1,23 +1,42 @@
 /* =========================================================
-   Neptun — сторінка блогу: фільтр статей за категорією
-   Кожна картка має атрибут data-cat з назвою категорії.
+   Neptun — сторінка блогу
+   - фільтр статей за категорією (data-cat на картці та кнопці)
+   - «Показати більше»: спершу показуємо PAGE карток
    ========================================================= */
 (function () {
   'use strict';
 
   const grid = document.getElementById('blGrid');
-  const filters = document.querySelectorAll('.bf');
-  if (!grid || !filters.length) return;
+  if (!grid) return;
 
-  const cards = grid.querySelectorAll('.bpost');
+  const PAGE = 6;
+  const cards = [...grid.querySelectorAll('.bpost')];
+  const filters = document.querySelectorAll('.bf');
+  const more = document.getElementById('blMore');
+
+  let cat = 'all';
+  let limit = PAGE;
+
+  function render() {
+    const matched = cards.filter(c => cat === 'all' || c.dataset.cat === cat);
+    cards.forEach(c => { c.hidden = true; });
+    matched.slice(0, limit).forEach(c => { c.hidden = false; });
+    if (more) more.parentElement.hidden = matched.length <= limit;
+  }
 
   filters.forEach(btn => btn.addEventListener('click', () => {
-    filters.forEach(x => x.classList.remove('on'));
+    filters.forEach(x => { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
     btn.classList.add('on');
-
-    const cat = btn.dataset.cat || 'all';
-    cards.forEach(card => {
-      card.hidden = cat !== 'all' && card.dataset.cat !== cat;
-    });
+    btn.setAttribute('aria-pressed', 'true');
+    cat = btn.dataset.cat || 'all';
+    limit = PAGE;
+    render();
   }));
+
+  if (more) more.addEventListener('click', () => {
+    limit += PAGE;
+    render();
+  });
+
+  render();
 })();

@@ -18,10 +18,10 @@
 <!-- ============ HEADER ============ -->
 <header id="hdr">
   <div class="nav">
-    <a href="../index.html" class="logo"><img src="../assets/img/trident.webp" alt="">Neptun</a>
+    <a href="../index.html" class="logo" aria-label="Neptun — на головну"><img src="../assets/img/trident.webp" alt="" width="61" height="71">Neptun</a>
     <nav class="nlinks">
-      <button class="ntrig" data-mega="1">Віртуальна АТС <span class="car">&#9662;</span></button>
-      <button class="ntrig" data-mega="1">Для бізнесу <span class="car">&#9662;</span></button>
+      <button class="ntrig" type="button" data-mega="1" aria-expanded="false" aria-controls="mega">Віртуальна АТС <span class="car">&#9662;</span></button>
+      <button class="ntrig" type="button" data-mega="1" aria-expanded="false" aria-controls="mega">Для бізнесу <span class="car">&#9662;</span></button>
       <a href="../index.html#smart">Автодайлер / Smart Calls</a>
       <a href="../index.html#testi">Кейси</a>
       <a href="../index.html#faq">Ціни</a>
@@ -34,7 +34,7 @@
         <a href="../index.html#form" class="btn b-outline">Увійти</a>
         <a href="../index.html#form" class="btn b-orange">Зареєструватися</a>
       </div>
-      <button class="burger" id="bg" aria-label="Меню"><span></span><span></span><span></span></button>
+      <button class="burger" id="bg" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
     </div>
   </div>
 
@@ -42,22 +42,22 @@
     <div class="mega-in">
       <div class="mcol">
         <h4><a href="../docs/ats.html">Віртуальна АТС</a></h4>
-        <a href="../docs/ats-connect.html"><img src="../assets/img/eco_anchor.webp" alt="">Як підключити</a>
-        <a href="../docs/ats-features.html"><img src="../assets/img/eco_wheel.webp" alt="">Можливості та функції</a>
-        <a href="../docs/ats-numbers.html"><img src="../assets/img/eco_horn.webp" alt="">Віртуальні номери</a>
-        <a href="../docs/ats-crm.html"><img src="../assets/img/eco_compass.webp" alt="">Інтеграції з CRM</a>
-        <a href="../docs/ats-pricing.html"><img src="../assets/img/eco_diving.webp" alt="">Тарифи на віртуальну АТС</a>
+        <a href="../docs/ats-connect.html"><img src="../assets/img/eco_anchor.webp" alt="" width="103" height="145">Як підключити</a>
+        <a href="../docs/ats-features.html"><img src="../assets/img/eco_wheel.webp" alt="" width="103" height="138">Можливості та функції</a>
+        <a href="../docs/ats-numbers.html"><img src="../assets/img/eco_horn.webp" alt="" width="103" height="125">Віртуальні номери</a>
+        <a href="../docs/ats-crm.html"><img src="../assets/img/eco_compass.webp" alt="" width="103" height="133">Інтеграції з CRM</a>
+        <a href="../docs/ats-pricing.html"><img src="../assets/img/eco_diving.webp" alt="" width="103" height="126">Тарифи на віртуальну АТС</a>
       </div>
       <div class="mcol wide">
         <h4><a href="../docs/biz.html">Для бізнесу</a></h4>
         <div class="mgrid">
-          <a href="../docs/biz-trust.html"><img src="../assets/img/eco_shell.webp" alt="">Номери, які підвищують довіру клієнтів</a>
-          <a href="../docs/biz-intl.html"><img src="../assets/img/eco_wheel.webp" alt="">Міжнародні номери без кордонів</a>
-          <a href="../docs/biz-sales.html"><img src="../assets/img/eco_compass.webp" alt="">Рішення для відділів продажів</a>
-          <a href="../docs/biz-sms-api.html"><img src="../assets/img/eco_treasure.webp" alt="">Номери з SMS, API та автоматизацією</a>
-          <a href="../docs/biz-callcenter.html"><img src="../assets/img/eco_bars.webp" alt="">Для колл-центрів та вихідних кампаній</a>
-          <a href="../docs/biz-fast.html"><img src="../assets/img/eco_horn.webp" alt="">Швидкий старт без KYC та бюрократії</a>
-          <a href="../docs/biz-ecom.html"><img src="../assets/img/eco_diving.webp" alt="">Для e-commerce та інтернет-магазинів</a>
+          <a href="../docs/biz-trust.html"><img src="../assets/img/eco_shell.webp" alt="" width="103" height="122">Номери, які підвищують довіру клієнтів</a>
+          <a href="../docs/biz-intl.html"><img src="../assets/img/eco_wheel.webp" alt="" width="103" height="138">Міжнародні номери без кордонів</a>
+          <a href="../docs/biz-sales.html"><img src="../assets/img/eco_compass.webp" alt="" width="103" height="133">Рішення для відділів продажів</a>
+          <a href="../docs/biz-sms-api.html"><img src="../assets/img/eco_treasure.webp" alt="" width="105" height="113">Номери з SMS, API та автоматизацією</a>
+          <a href="../docs/biz-callcenter.html"><img src="../assets/img/eco_bars.webp" alt="" width="103" height="117">Для колл-центрів та вихідних кампаній</a>
+          <a href="../docs/biz-fast.html"><img src="../assets/img/eco_horn.webp" alt="" width="103" height="125">Швидкий старт без KYC та бюрократії</a>
+          <a href="../docs/biz-ecom.html"><img src="../assets/img/eco_diving.webp" alt="" width="103" height="126">Для e-commerce та інтернет-магазинів</a>
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@
 
   <div class="mmenu" id="mm">
     <div class="msec">
-      <button class="msec-h">Віртуальна АТС <span class="car">&#9662;</span></button>
+      <button class="msec-h" type="button" aria-expanded="false">Віртуальна АТС <span class="car">&#9662;</span></button>
       <div class="msec-b"><div>
         <a href="../docs/ats.html"><b>Огляд розділу</b></a>
         <a href="../docs/ats-connect.html">Як підключити</a>
@@ -76,12 +76,13 @@
       </div></div>
     </div>
     <div class="msec">
-      <button class="msec-h">Для бізнесу <span class="car">&#9662;</span></button>
+      <button class="msec-h" type="button" aria-expanded="false">Для бізнесу <span class="car">&#9662;</span></button>
       <div class="msec-b"><div>
         <a href="../docs/biz.html"><b>Огляд розділу</b></a>
         <a href="../docs/biz-trust.html">Номери, які підвищують довіру клієнтів</a>
         <a href="../docs/biz-intl.html">Міжнародні номери без кордонів</a>
         <a href="../docs/biz-sales.html">Рішення для відділів продажів</a>
+        <a href="../docs/biz-sms-api.html">Номери з SMS, API та автоматизацією</a>
         <a href="../docs/biz-callcenter.html">Для колл-центрів та вихідних кампаній</a>
         <a href="../docs/biz-ecom.html">Для e-commerce та інтернет-магазинів</a>
         <a href="../docs/biz-fast.html">Швидкий старт без KYC</a>
@@ -103,7 +104,7 @@
 <main id="page-doc">
   <section class="doc-hero">
     <div class="wrap">
-      <div class="crumbs"><a href="../index.html">Головна</a> <span>/</span> <a class="crumb-sec" href="ats.html">Віртуальна АТС</a></div>
+      <nav class="crumbs" aria-label="Навігаційний ланцюжок"><a href="../index.html">Головна</a> <span>/</span> <a class="crumb-sec" href="ats.html">Віртуальна АТС</a></nav>
       <span class="tag">Віртуальна АТС</span>
       <h1>Тарифи на віртуальну АТС</h1>
       <p>Оплата за фактичне з’єднання, прозорі умови та відсутність прихованих платежів.</p>
@@ -113,14 +114,14 @@
     <div class="wrap doc-cols">
       <aside class="doc-nav">
         <h4>Віртуальна АТС</h4>
-        <div>
+        <nav aria-label="Віртуальна АТС">
           <a href="ats.html">Віртуальна АТС</a>
           <a href="ats-connect.html">Як підключити віртуальну АТС</a>
           <a href="ats-features.html">Можливості та функції віртуальної АТС</a>
           <a href="ats-numbers.html">Віртуальні номери (DID + SMS)</a>
           <a href="ats-crm.html">Інтеграції з CRM та API</a>
-          <a href="ats-pricing.html" class="on">Тарифи на віртуальну АТС</a>
-        </div>
+          <a href="ats-pricing.html" class="on" aria-current="page">Тарифи на віртуальну АТС</a>
+        </nav>
       </aside>
       <div>
         <div class="doc-body">
@@ -135,6 +136,20 @@
     </div>
   </section>
 </main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-col-l">
+      <div class="flogo"><img src="../assets/img/trident.webp" alt="" width="61" height="71" loading="lazy" decoding="async">Neptun</div>
+      <p class="fdesc">VoIP-телефонія для бізнесу. Допомагаємо збільшити продажі та не втрачати жодного ліда.</p>
+      <div class="fsoc"><a href="#" aria-label="Telegram">✈️</a><a href="#" aria-label="WhatsApp">💬</a><a href="#" aria-label="Instagram">📷</a></div>
+    </div>
+    <div class="foot-col-r">
+      <div class="flinks"><a href="../index.html">Про нас</a><a href="../index.html#faq">Тарифи</a><a href="../blog.html">Блог</a><a href="../index.html#form">Контакти</a></div>
+    </div>
+    <div class="fbot">Політика конфіденційності<br>Neptun © 2026 · Усі права захищені</div>
+  </div>
+</footer>
 
 <script src="../assets/js/main.js"></script>
 </body>

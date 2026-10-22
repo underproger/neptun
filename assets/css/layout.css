@@ -21,7 +21,9 @@ header{position:sticky;top:0;z-index:80;background:rgba(245,248,247,.93);backdro
 .burger.on span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
 
 /* ---------- mobile menu ---------- */
-.mmenu{display:none;flex-direction:column;padding:6px var(--pad) 18px;background:var(--sky);border-bottom:1px solid var(--line);}
+.mmenu{display:none;flex-direction:column;padding:6px var(--pad) 18px;background:var(--sky);border-bottom:1px solid var(--line);
+  /* меню не повинно бути вищим за екран — інакше нижні пункти недосяжні */
+  max-height:calc(100vh - 58px);max-height:calc(100dvh - 58px);overflow-y:auto;overscroll-behavior:contain;}
 .mmenu.on{display:flex;}
 .mmenu a{padding:14px 2px;font-weight:600;font-size:15.5px;border-bottom:1px solid var(--mint);}
 .mmenu .mc{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
@@ -66,7 +68,10 @@ header{position:sticky;top:0;z-index:80;background:rgba(245,248,247,.93);backdro
 .fcta h2{font-size:28px;margin-bottom:13px;color:var(--deep);}
 .fcta h2 .or{color:var(--orange);}
 .fcta .fl{color:var(--muted);font-size:15px;font-weight:500;margin-bottom:24px;line-height:1.6;}
-.fmer{width:88%;max-width:360px;margin:26px auto 0;display:block;}
+.fmer{width:88%;max-width:360px;margin:26px auto 0;display:block;mix-blend-mode:multiply;
+  /* у картинки акварельна прямокутна підкладка — розчиняємо її краї */
+  -webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 72%,transparent 100%);
+  mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 72%,transparent 100%);}
 .fwave{width:100%;margin:-30px 0 0;display:block;}
 
 /* ---------- footer ---------- */
@@ -86,6 +91,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;background:#eaf2ef;}
   transform:translateY(115%);transition:transform .3s;}
 .sticky.on{transform:translateY(0);}
 
+@media(max-width:699px){
+  #page-home footer{padding-bottom:calc(34px + 72px + env(safe-area-inset-bottom));}
+}
+
 /* ================= TABLET ================= */
 @media(min-width:700px){
   .flinks{grid-template-columns:repeat(4,1fr);}
@@ -93,19 +102,28 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;background:#eaf2ef;}
 }
 
 /* ================= DESKTOP ================= */
-@media(min-width:1000px){
+/* шапка: повна навігація з 1100px (на 1000–1099 пункти меню обрізались) */
+@media(min-width:1100px){
   .nav{max-width:100%;padding:13px 26px;gap:18px;}
-  .nlinks{display:flex;gap:15px;font-size:13px;font-weight:600;flex:1 1 auto;justify-content:center;min-width:0;overflow:hidden;}
+  .nlinks{display:flex;gap:15px;font-size:13px;font-weight:600;flex:1 1 auto;justify-content:center;min-width:0;}
   .nlinks a{opacity:.86;transition:.2s;white-space:nowrap;}
   .nlinks a:hover{opacity:1;}
   .burger{display:none;}
+  .mmenu,.mmenu.on{display:none;}
   .ncta{display:flex;gap:10px;}
   .ncta .btn{padding:11px 20px;min-height:44px;font-size:12px;}
+}
 
+@media(min-width:1000px){
   /* footer CTA: текст + русалка поруч */
+  .fcta{padding:64px 0 0;}
   .fcta .wrap{display:grid;grid-template-columns:1fr 420px;gap:50px;align-items:center;}
-  .fcta .fl{max-width:440px;}
+  .fcta h2{font-size:38px;}
+  .fcta .fl{font-size:16px;max-width:440px;}
   .fcta .btns{justify-content:flex-start;}
+  .fmer{width:100%;margin:0 auto;} /* не більше 360px — розмір вихідної картинки */
+  .fwave{margin-top:-10px;}
+  .fdesc{max-width:320px;}
 
   /* footer: дві колонки */
   .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
@@ -123,4 +141,5 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;background:#eaf2ef;}
   .nav{max-width:1340px;padding:13px 32px;}
   .nlinks{gap:22px;font-size:14px;}
   .fcta .wrap{grid-template-columns:1fr 480px;gap:60px;}
+  .fcta h2{font-size:44px;}
 }
