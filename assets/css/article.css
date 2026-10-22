@@ -1,0 +1,43 @@
+/* =========================================================
+   ARTICLE — сторінка окремої статті блогу
+   Потребує blog.css (картки .bpost у блоці «Інші статті»).
+   ========================================================= */
+
+#page-post{background:#0f3a34;}
+.art{padding:26px 0 46px;}
+.art-back{display:inline-block;font-size:13px;font-weight:700;color:#9dc2bb;margin-bottom:20px;transition:color .18s;}
+.art-back:hover{color:#fff;}
+.art-head{max-width:780px;}
+.art-head h1{font-size:26px;color:#fff;line-height:1.25;margin:12px 0 12px;font-weight:800;}
+.art-meta{font-size:12.5px;font-weight:600;color:#7fa8a1;}
+.art-cover{margin:22px 0 26px;height:200px;background:linear-gradient(160deg,#1c5a51,#0d332e);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.art-cover img{width:100%;height:100%;object-fit:cover;}
+.art-body{max-width:760px;}
+.art-body h2{font-size:19px;color:#fff;margin:26px 0 12px;line-height:1.3;font-weight:800;}
+.art-body p{font-size:14.5px;color:#c3dbd6;line-height:1.75;font-weight:500;margin-bottom:14px;}
+.art-body ul{margin:0 0 16px;padding:0;}
+.art-body li{position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px;
+  color:#c3dbd6;line-height:1.65;font-weight:500;}
+.art-body li:before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;
+  border-radius:50%;background:var(--orange);}
+.art-body blockquote{margin:22px 0;padding:16px 20px;border-left:3px solid var(--orange);
+  background:rgba(255,255,255,.06);border-radius:0 12px 12px 0;
+  font-size:15px;color:#fff;font-weight:600;line-height:1.6;}
+.art-cta{margin:34px 0 40px;background:linear-gradient(160deg,#1c5a51,#0d332e);
+  border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px 20px;text-align:center;}
+.art-cta h3{font-size:18px;color:#fff;margin-bottom:8px;}
+.art-cta p{font-size:13.5px;color:#a8c6c0;font-weight:500;margin-bottom:18px;}
+.art-more-t{font-size:20px;color:#fff;text-align:center;margin-bottom:20px;font-weight:800;}
+@media(min-width:700px){
+  .art{padding:34px 0 60px;}
+  .art-head h1{font-size:34px;}
+  .art-cover{height:320px;border-radius:20px;}
+  .art-body h2{font-size:22px;margin:32px 0 14px;}
+  .art-body p,.art-body li{font-size:15.5px;}
+  .art-cta{padding:30px;}
+}
+@media(min-width:1000px){
+  .art-head h1{font-size:40px;}
+  .art-cover{height:400px;}
+}

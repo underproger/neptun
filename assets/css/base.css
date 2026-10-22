@@ -1,0 +1,61 @@
+/* =========================================================
+   BASE — змінні, ресет, типографіка, кнопки
+   Підключається на всіх сторінках першим.
+   ========================================================= */
+
+:root{
+  --deep:#14403a; --deep2:#1b5a52; --teal:#2a6f66;
+  --mint:#dfe9e6; --mint2:#e9f1ef; --paper:#eef4f2;
+  --sky:#f5f8f7;
+  --orange:#ef8a1e; --orange-d:#d97706;
+  --muted:#587a74; --line:#cfdedb;
+  --pad:20px; --r:18px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:'Manrope',system-ui,-apple-system,sans-serif;
+  color:var(--deep); background:var(--paper);
+  font-size:15px; line-height:1.55; overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+img{display:block;max-width:100%;}
+section{position:relative;}
+
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--pad);}
+h1,h2,h3,h4{line-height:1.16;letter-spacing:-.02em;font-weight:800;}
+
+/* іконка-тризуб усередині заголовків */
+.tri{width:.92em;height:1.1em;object-fit:contain;display:inline-block;vertical-align:-.16em;}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:15px 26px;border-radius:12px;font-weight:700;font-size:13px;
+  letter-spacing:.04em;text-transform:uppercase;min-height:52px;
+  transition:transform .12s,box-shadow .2s,background .2s,color .2s;
+  width:100%;
+}
+.btn:active{transform:scale(.975);}
+.b-orange{background:var(--orange);color:#fff;box-shadow:0 10px 26px -12px rgba(239,138,30,.9);}
+.b-orange:hover{background:var(--orange-d);}
+.b-outline{border:1.5px solid var(--deep2);color:var(--deep);}
+.b-outline:hover{background:var(--deep);color:#fff;border-color:var(--deep);}
+.b-dark{background:var(--deep);color:#fff;}
+.b-light{border:1.5px solid rgba(255,255,255,.55);color:#fff;}
+.b-outline-light{border:1.5px solid rgba(255,255,255,.45);color:#fff;background:transparent;}
+.b-outline-light:hover{background:rgba(255,255,255,.12);}
+.full{width:100%;}
+
+.btns{display:flex;flex-direction:column;gap:11px;}
+
+/* ================= TABLET ================= */
+@media(min-width:700px){
+  :root{--pad:32px;}
+  body{font-size:16px;}
+  .btns{flex-direction:row;justify-content:center;}
+  .btn{width:auto;}
+}

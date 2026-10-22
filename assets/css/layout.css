@@ -1,0 +1,126 @@
+/* =========================================================
+   LAYOUT — шапка, мега-меню, мобільне меню, футер головної,
+   липка кнопка внизу (mobile)
+   ========================================================= */
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:80;background:rgba(245,248,247,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(207,222,219,.7);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px var(--pad);max-width:1200px;margin:0 auto;}
+.logo{display:flex;align-items:center;gap:7px;font-size:21px;font-weight:800;letter-spacing:-.03em;color:var(--deep);flex:none;white-space:nowrap;}
+.logo img{width:21px;height:24px;object-fit:contain;}
+.nlinks{display:none;}
+.nright{display:flex;align-items:center;gap:9px;flex:none;}
+.ncta{display:none;}
+.lang{display:none;align-items:center;gap:5px;font-size:13.5px;font-weight:700;}
+
+/* burger */
+.burger{display:flex;flex-direction:column;gap:4.5px;padding:11px;margin:-11px;}
+.burger span{width:22px;height:2px;background:var(--deep);border-radius:2px;transition:.25s;}
+.burger.on span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.burger.on span:nth-child(2){opacity:0;}
+.burger.on span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* ---------- mobile menu ---------- */
+.mmenu{display:none;flex-direction:column;padding:6px var(--pad) 18px;background:var(--sky);border-bottom:1px solid var(--line);}
+.mmenu.on{display:flex;}
+.mmenu a{padding:14px 2px;font-weight:600;font-size:15.5px;border-bottom:1px solid var(--mint);}
+.mmenu .mc{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+
+/* ---------- mega menu (desktop) ---------- */
+.ntrig{display:flex;align-items:center;gap:6px;font-size:inherit;font-weight:600;color:inherit;
+  white-space:nowrap;opacity:.86;transition:opacity .2s;padding:0;}
+.ntrig:hover,.ntrig.on{opacity:1;}
+.car{font-size:.72em;transition:transform .25s;display:inline-block;}
+.ntrig.on .car{transform:rotate(180deg);}
+.mega{
+  display:none;position:absolute;left:0;right:0;top:100%;z-index:70;
+  background:#fff;border-bottom:1px solid var(--line);
+  box-shadow:0 24px 48px -30px rgba(20,64,58,.5);
+}
+.mega.on{display:block;animation:megaIn .22s ease;}
+@keyframes megaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mega-in{max-width:1120px;margin:0 auto;padding:26px 32px 30px;display:grid;
+  grid-template-columns:290px 1fr;gap:36px;}
+.mcol h4{font-size:16px;font-weight:800;color:var(--deep);margin-bottom:16px;}
+.mcol h4 a{transition:color .18s;}
+.mcol h4 a:hover{color:var(--orange-d);}
+.mcol a{display:flex;align-items:center;gap:12px;padding:8px 0;font-size:14px;
+  font-weight:600;color:var(--deep2);transition:color .18s,transform .18s;}
+.mcol a:hover{color:var(--orange-d);transform:translateX(3px);}
+.mcol a img{width:26px;height:26px;object-fit:contain;flex:none;}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:2px 30px;}
+
+/* mobile nested sections (акордеон у мобільному меню) */
+.msec{border-bottom:1px solid var(--mint);}
+.msec-h{display:flex;align-items:center;justify-content:space-between;width:100%;
+  padding:14px 2px;font-weight:600;font-size:15.5px;color:var(--deep);text-align:left;}
+.msec.on .car{transform:rotate(180deg);}
+.msec-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease;}
+.msec.on .msec-b{grid-template-rows:1fr;}
+.msec-b>div{overflow:hidden;}
+.msec-b a{display:block;padding:11px 2px 11px 16px;font-size:14px;font-weight:500;
+  color:var(--muted);border-bottom:none;}
+
+/* ---------- footer CTA (головна) ---------- */
+.fcta{background:linear-gradient(180deg,#f4f8f7 0%,#e6f0ed 100%);color:var(--deep);padding:50px 0 0;overflow:hidden;}
+.fcta h2{font-size:28px;margin-bottom:13px;color:var(--deep);}
+.fcta h2 .or{color:var(--orange);}
+.fcta .fl{color:var(--muted);font-size:15px;font-weight:500;margin-bottom:24px;line-height:1.6;}
+.fmer{width:88%;max-width:360px;margin:26px auto 0;display:block;}
+.fwave{width:100%;margin:-30px 0 0;display:block;}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:28px 0 34px;background:#eaf2ef;}
+.flogo{display:flex;align-items:center;gap:8px;font-size:19px;font-weight:800;margin-bottom:10px;letter-spacing:-.03em;}
+.flogo img{width:20px;}
+.fdesc{font-size:12.5px;font-weight:500;color:var(--muted);max-width:280px;margin-bottom:22px;line-height:1.6;}
+.flinks{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13.5px;font-weight:600;color:var(--deep2);margin-bottom:22px;}
+.fsoc{display:flex;gap:11px;margin-bottom:20px;}
+.fsoc a{width:41px;height:41px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.fbot{font-size:11.5px;font-weight:500;color:var(--muted);line-height:1.9;border-top:1px solid var(--line);padding-top:17px;}
+
+/* ---------- sticky CTA (mobile) ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(238,244,242,.97);
+  backdrop-filter:blur(14px);border-top:1px solid var(--line);
+  padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));
+  transform:translateY(115%);transition:transform .3s;}
+.sticky.on{transform:translateY(0);}
+
+/* ================= TABLET ================= */
+@media(min-width:700px){
+  .flinks{grid-template-columns:repeat(4,1fr);}
+  .sticky{display:none;}
+}
+
+/* ================= DESKTOP ================= */
+@media(min-width:1000px){
+  .nav{max-width:100%;padding:13px 26px;gap:18px;}
+  .nlinks{display:flex;gap:15px;font-size:13px;font-weight:600;flex:1 1 auto;justify-content:center;min-width:0;overflow:hidden;}
+  .nlinks a{opacity:.86;transition:.2s;white-space:nowrap;}
+  .nlinks a:hover{opacity:1;}
+  .burger{display:none;}
+  .ncta{display:flex;gap:10px;}
+  .ncta .btn{padding:11px 20px;min-height:44px;font-size:12px;}
+
+  /* footer CTA: текст + русалка поруч */
+  .fcta .wrap{display:grid;grid-template-columns:1fr 420px;gap:50px;align-items:center;}
+  .fcta .fl{max-width:440px;}
+  .fcta .btns{justify-content:flex-start;}
+
+  /* footer: дві колонки */
+  .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .foot-col-l{display:flex;flex-direction:column;}
+  .foot-col-r{display:flex;justify-content:flex-end;}
+  .foot-col-r .flinks{
+    display:flex;flex-direction:column;gap:14px;margin-bottom:0;
+    font-size:14px;text-align:right;
+  }
+  .fbot{grid-column:1 / -1;margin-top:8px;}
+}
+
+@media(min-width:1240px){
+  .lang{display:flex;white-space:nowrap;}
+  .nav{max-width:1340px;padding:13px 32px;}
+  .nlinks{gap:22px;font-size:14px;}
+  .fcta .wrap{grid-template-columns:1fr 480px;gap:60px;}
+}

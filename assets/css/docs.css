@@ -1,0 +1,49 @@
+/* =========================================================
+   DOCS — внутрішні сторінки розділів
+   «Віртуальна АТС» та «Для бізнесу»
+   ========================================================= */
+
+.doc-hero{background:linear-gradient(180deg,#f6f9f8,#e7f0ee);padding:26px 0 30px;}
+.crumbs{font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:14px;}
+.crumbs a{color:var(--teal);}
+.crumbs a:hover{text-decoration:underline;}
+.crumbs span{margin:0 6px;opacity:.6;}
+.doc-hero h1{font-size:26px;color:var(--deep);line-height:1.25;margin:12px 0 12px;}
+.doc-hero p{font-size:15px;font-weight:500;color:var(--muted);line-height:1.6;max-width:640px;}
+.doc-main{background:var(--paper);padding:28px 0 50px;}
+.doc-cols{display:grid;grid-template-columns:1fr;gap:22px;}
+.doc-nav{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 8px;}
+.doc-nav h4{font-size:13px;font-weight:800;color:var(--deep);margin-bottom:10px;
+  text-transform:uppercase;letter-spacing:.06em;}
+.doc-nav a{display:block;padding:10px 0;font-size:13.5px;font-weight:600;color:var(--deep2);
+  border-bottom:1px solid var(--mint);transition:color .18s,padding-left .18s;}
+.doc-nav a:last-child{border-bottom:none;}
+.doc-nav a:hover{color:var(--orange-d);padding-left:4px;}
+.doc-nav a.on{color:var(--orange-d);}
+.doc-body h2{font-size:19px;color:var(--deep);margin:24px 0 11px;line-height:1.3;}
+.doc-body h2:first-child{margin-top:0;}
+.doc-body p{font-size:14.5px;color:var(--muted);line-height:1.7;font-weight:500;margin-bottom:13px;}
+.doc-body ul{margin:0 0 16px;padding:0;}
+.doc-body li{position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px;
+  color:var(--muted);line-height:1.6;font-weight:500;}
+.doc-body li:before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;
+  border-radius:50%;background:var(--orange);}
+.doc-body blockquote{margin:20px 0;padding:15px 18px;border-left:3px solid var(--orange);
+  background:var(--mint2);border-radius:0 12px 12px 0;font-size:14.5px;color:var(--deep);
+  font-weight:600;line-height:1.6;}
+.doc-cta{margin-top:30px;background:linear-gradient(160deg,#22645b,#0f3a34);border-radius:18px;
+  padding:24px 20px;text-align:center;color:#fff;}
+.doc-cta h3{font-size:18px;margin-bottom:8px;}
+.doc-cta p{font-size:13.5px;color:#b6d2cc;font-weight:500;margin-bottom:18px;}
+@media(min-width:700px){
+  .doc-hero{padding:34px 0 40px;}
+  .doc-hero h1{font-size:34px;}
+  .doc-cols{grid-template-columns:250px 1fr;gap:34px;}
+  .doc-nav{position:sticky;top:96px;}
+  .doc-body h2{font-size:21px;}
+  .doc-body p,.doc-body li{font-size:15.5px;}
+}
+@media(min-width:1000px){
+  .doc-hero h1{font-size:38px;}
+  .doc-cols{grid-template-columns:280px 1fr;gap:44px;}
+}

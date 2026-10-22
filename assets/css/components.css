@@ -1,0 +1,72 @@
+/* =========================================================
+   COMPONENTS — спільні блоки: секції, заголовки, бейджі,
+   слайдери (swipe), стрілки, точки, поля форм, бульбашки
+   ========================================================= */
+
+/* ---------- section shell ---------- */
+.sec{padding:52px 0;position:relative;}
+.head{text-align:center;margin-bottom:28px;position:relative;z-index:2;}
+.head h2{font-size:25px;color:var(--deep);}
+.head h2 .or{color:var(--orange);}
+.head p{margin-top:10px;font-size:14.5px;font-weight:500;color:var(--muted);line-height:1.6;}
+.tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--orange-d);background:rgba(239,138,30,.13);padding:6px 14px;border-radius:30px;margin-bottom:13px;}
+.rule{display:flex;align-items:center;justify-content:center;gap:11px;margin-top:14px;}
+.rule:before,.rule:after{content:"";height:1px;width:46px;background:var(--line);}
+.rule img{width:30px;}
+
+/* ---------- swipe galleries ---------- */
+.swipe-wrap{position:relative;}
+.swipe{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  margin:0 calc(var(--pad)*-1);padding:2px var(--pad) 16px;-webkit-overflow-scrolling:touch;}
+.swipe::-webkit-scrollbar{display:none;}
+.swipe>*{scroll-snap-align:center;flex:0 0 79%;max-width:300px;}
+.swipe.dragging{cursor:grabbing;scroll-snap-type:none;user-select:none;}
+
+.sw-arrow{
+  display:none;position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);
+  color:var(--deep);font-size:16px;align-items:center;justify-content:center;
+  box-shadow:0 10px 22px -12px rgba(20,64,58,.5);transition:background .18s,color .18s,box-shadow .18s;
+}
+.sw-arrow:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
+.sw-arrow.left{left:-21px;}
+.sw-arrow.right{right:-21px;}
+.sw-arrow[disabled]{opacity:.35;pointer-events:none;}
+
+.dots{display:flex;justify-content:center;gap:6px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);transition:.25s;}
+.dot.on{background:var(--teal);width:20px;border-radius:6px;}
+
+/* ---------- form fields ---------- */
+.fld{width:100%;padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:var(--paper);
+  font-size:16px;font-weight:600;font-family:inherit;margin-bottom:10px;color:var(--deep);}
+.fld::placeholder{color:#8ea9a4;}
+.fld:focus{outline:2px solid var(--orange);outline-offset:1px;background:#fff;}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 15px;}
+.seg label{border:1px solid var(--line);border-radius:12px;padding:12px 4px;font-size:12px;font-weight:700;
+  display:flex;flex-direction:column;align-items:center;gap:5px;transition:.15s;}
+.seg input{display:none;}
+.seg label:has(input:checked){background:var(--mint);border-color:var(--teal);}
+
+/* ---------- bubbles (декоративні бульбашки) ---------- */
+.bubs{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;}
+.bub{position:absolute;border:1.5px solid rgba(42,111,102,.16);border-radius:50%;animation:rise linear infinite;}
+@keyframes rise{0%{transform:translateY(40px);opacity:0}14%{opacity:1}100%{transform:translateY(-400px);opacity:0}}
+
+/* ================= TABLET ================= */
+@media(min-width:700px){
+  .head h2{font-size:31px;}
+  .swipe>*{flex:0 0 46%;}
+}
+
+/* ================= DESKTOP ================= */
+@media(min-width:1000px){
+  .sw-arrow{display:flex;}
+  .swipe{cursor:grab;}
+  .swipe:active{cursor:grabbing;}
+  .swipe>*{flex:0 0 300px;max-width:none;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .bub{display:none;}
+}
